@@ -1,0 +1,11 @@
+{
+  "name": "@ajf/ajf-examples/material/calendar",
+  "main": "../../bundles/ajf-examples-material-calendar.umd.js",
+  "fesm5": "../../fesm5/material/calendar.js",
+  "fesm2015": "../../fesm2015/material/calendar.js",
+  "esm5": "../../esm5/material/calendar/index.js",
+  "esm2015": "../../esm2015/material/calendar/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/material/calendar.js",
+  "es2015": "../../fesm2015/material/calendar.js"
+}
