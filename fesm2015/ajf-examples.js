@@ -1,6 +1,6 @@
 /**
  * @fileoverview added by tsickle
- * Generated from: bazel-out/darwin-fastbuild/bin/src/ajf-examples/example-module.ts
+ * Generated from: bazel-out/k8-fastbuild/bin/src/ajf-examples/example-module.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
