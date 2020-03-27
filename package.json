@@ -1,6 +1,6 @@
 {
   "name": "@ajf/ajf-examples",
-  "version": "9.0.1-sha-ed1b800",
+  "version": "9.0.1-sha-84713bd",
   "description": "Ajf Ionic Examples",
   "main": "./bundles/ajf-examples.umd.js",
   "module": "./esm5/ajf-examples.es5.js",
@@ -25,8 +25,8 @@
   "peerDependencies": {
     "@angular/core": "^9.0.0 || ^10.0.0",
     "@angular/common": "^9.0.0 || ^10.0.0",
-    "@ajf/core": "9.0.1-sha-ed1b800",
-    "@ajf/ionic": "9.0.1-sha-ed1b800",
+    "@ajf/core": "9.0.1-sha-84713bd",
+    "@ajf/ionic": "9.0.1-sha-84713bd",
     "tslib": "^1.9.0"
   }
 }
