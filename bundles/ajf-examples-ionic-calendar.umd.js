@@ -10,13 +10,6 @@
     var IonicCalendarSimpleExample = /** @class */ (function () {
         function IonicCalendarSimpleExample() {
         }
-        IonicCalendarSimpleExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'calendar-simple-example',
-                        templateUrl: 'calendar-simple-example.html',
-                        styleUrls: ['calendar-simple-example.css'],
-                    },] },
-        ];
         IonicCalendarSimpleExample.ɵfac = function IonicCalendarSimpleExample_Factory(t) { return new (t || IonicCalendarSimpleExample)(); };
         IonicCalendarSimpleExample.ɵcmp = i0["ɵɵdefineComponent"]({ type: IonicCalendarSimpleExample, selectors: [["calendar-simple-example"]], decls: 1, vars: 0, template: function IonicCalendarSimpleExample_Template(rf, ctx) { if (rf & 1) {
                 i0["ɵɵelement"](0, "ajf-calendar");
@@ -38,15 +31,6 @@
     var CalendarExamplesModule = /** @class */ (function () {
         function CalendarExamplesModule() {
         }
-        CalendarExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i1.AjfCalendarModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         CalendarExamplesModule.ɵmod = i0["ɵɵdefineNgModule"]({ type: CalendarExamplesModule });
         CalendarExamplesModule.ɵinj = i0["ɵɵdefineInjector"]({ factory: function CalendarExamplesModule_Factory(t) { return new (t || CalendarExamplesModule)(); }, imports: [[
                     i1.AjfCalendarModule,
