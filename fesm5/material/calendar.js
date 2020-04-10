@@ -23,7 +23,7 @@ var MaterialCalendarSimpleExample = /** @class */ (function () {
     }], null, null); })();
 
 var EXAMPLES = [
-    MaterialCalendarSimpleExample
+    MaterialCalendarSimpleExample,
 ];
 var CalendarExamplesModule = /** @class */ (function () {
     function CalendarExamplesModule() {

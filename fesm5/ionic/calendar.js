@@ -23,7 +23,7 @@ var IonicCalendarSimpleExample = /** @class */ (function () {
     }], null, null); })();
 
 var EXAMPLES = [
-    IonicCalendarSimpleExample
+    IonicCalendarSimpleExample,
 ];
 var CalendarExamplesModule = /** @class */ (function () {
     function CalendarExamplesModule() {

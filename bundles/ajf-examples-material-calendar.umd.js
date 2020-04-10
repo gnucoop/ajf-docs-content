@@ -26,7 +26,7 @@
         }], null, null); })();
 
     var EXAMPLES = [
-        MaterialCalendarSimpleExample
+        MaterialCalendarSimpleExample,
     ];
     var CalendarExamplesModule = /** @class */ (function () {
         function CalendarExamplesModule() {

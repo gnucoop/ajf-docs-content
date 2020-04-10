@@ -38,7 +38,7 @@ MaterialCalendarSimpleExample.decorators = [
  */
 /** @type {?} */
 const EXAMPLES = [
-    MaterialCalendarSimpleExample
+    MaterialCalendarSimpleExample,
 ];
 class CalendarExamplesModule {
 }

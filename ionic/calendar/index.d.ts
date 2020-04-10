@@ -2,7 +2,7 @@ import { IonicCalendarSimpleExample } from './calendar-simple/calendar-simple-ex
 import * as i0 from "@angular/core";
 import * as i1 from "./calendar-simple/calendar-simple-example";
 import * as i2 from "@ajf/ionic/calendar";
-export { IonicCalendarSimpleExample };
+export { IonicCalendarSimpleExample, };
 export declare class CalendarExamplesModule {
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<CalendarExamplesModule, [typeof i1.IonicCalendarSimpleExample], [typeof i2.AjfCalendarModule], [typeof i1.IonicCalendarSimpleExample]>;
     static ɵinj: i0.ɵɵInjectorDef<CalendarExamplesModule>;

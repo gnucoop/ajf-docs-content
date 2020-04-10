@@ -38,7 +38,7 @@ IonicCalendarSimpleExample.decorators = [
  */
 /** @type {?} */
 const EXAMPLES = [
-    IonicCalendarSimpleExample
+    IonicCalendarSimpleExample,
 ];
 class CalendarExamplesModule {
 }
