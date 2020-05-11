@@ -1,11 +1,6 @@
 {
   "name": "@ajf/ajf-examples",
-  "version": "9.0.1-sha-3489afd",
-  "description": "Ajf Ionic Examples",
-  "main": "./bundles/ajf-examples.umd.js",
-  "module": "./esm5/ajf-examples.es5.js",
-  "es2015": "./esm2015/ajf-examples.js",
-  "typings": "./ajf-examples.d.ts",
+  "version": "9.0.1-sha-37fb771",
   "private": true,
   "repository": {
     "type": "git",
@@ -23,10 +18,16 @@
   },
   "homepage": "https://github.com/gnucoop/ajf#readme",
   "peerDependencies": {
-    "@angular/core": "^9.0.0 || ^10.0.0",
-    "@angular/common": "^9.0.0 || ^10.0.0",
-    "@ajf/core": "9.0.1-sha-3489afd",
-    "@ajf/ionic": "9.0.1-sha-3489afd",
-    "tslib": "^1.9.0"
-  }
+    "@angular/core": "^10.0.0 || ^11.0.0",
+    "@angular/common": "^10.0.0 || ^11.0.0",
+    "@ajf/core": "9.0.1-sha-37fb771",
+    "@ajf/ionic": "9.0.1-sha-37fb771",
+    "tslib": "^1.10.0"
+  },
+  "main": "./bundles/ajf-examples.umd.js",
+  "fesm2015": "./fesm2015/ajf-examples.js",
+  "esm2015": "./esm2015/index.js",
+  "typings": "./index.d.ts",
+  "module": "./fesm2015/ajf-examples.js",
+  "es2015": "./fesm2015/ajf-examples.js"
 }
