@@ -1,6 +1,6 @@
 {
   "name": "@ajf/ajf-examples",
-  "version": "10.0.0-next.0-sha-bfc59fd",
+  "version": "10.0.0-next.0-sha-bd37237",
   "private": true,
   "repository": {
     "type": "git",
@@ -20,9 +20,9 @@
   "peerDependencies": {
     "@angular/core": "^10.0.0 || ^11.0.0",
     "@angular/common": "^10.0.0 || ^11.0.0",
-    "@ajf/core": "10.0.0-next.0-sha-bfc59fd",
-    "@ajf/ionic": "10.0.0-next.0-sha-bfc59fd",
-    "tslib": "^1.10.0"
+    "@ajf/core": "10.0.0-next.0-sha-bd37237",
+    "@ajf/ionic": "10.0.0-next.0-sha-bd37237",
+    "tslib": "^2.0.0"
   },
   "main": "./bundles/ajf-examples.umd.js",
   "fesm2015": "./fesm2015/ajf-examples.js",
