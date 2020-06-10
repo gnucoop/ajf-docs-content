@@ -2,8 +2,8 @@
   "name": "@ajf/ajf-examples/ionic/calendar",
   "main": "../../bundles/ajf-examples-ionic-calendar.umd.js",
   "fesm2015": "../../fesm2015/ionic/calendar.js",
-  "esm2015": "../../esm2015/ionic/calendar/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/ionic/calendar/calendar_public_index.js",
+  "typings": "./calendar_public_index.d.ts",
   "module": "../../fesm2015/ionic/calendar.js",
   "es2015": "../../fesm2015/ionic/calendar.js"
 }

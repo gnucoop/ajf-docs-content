@@ -46,5 +46,9 @@ let CalendarExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { CalendarExamplesModule, IonicCalendarSimpleExample };
 //# sourceMappingURL=calendar.js.map

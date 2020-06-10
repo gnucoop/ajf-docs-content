@@ -49,6 +49,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CalendarExamplesModule = CalendarExamplesModule;
     exports.MaterialCalendarSimpleExample = MaterialCalendarSimpleExample;
 
