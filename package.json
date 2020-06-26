@@ -1,6 +1,6 @@
 {
   "name": "@ajf/ajf-examples",
-  "version": "10.0.0-next.0-sha-2d4d49d",
+  "version": "10.0.0-sha-c372688",
   "private": true,
   "repository": {
     "type": "git",
@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/gnucoop/ajf#readme",
   "peerDependencies": {
-    "@angular/core": "^10.0.0 || ^11.0.0",
-    "@angular/common": "^10.0.0 || ^11.0.0",
-    "@ajf/core": "10.0.0-next.0-sha-2d4d49d",
-    "@ajf/ionic": "10.0.0-next.0-sha-2d4d49d",
+    "@angular/core": "^10.0.0-sha-c372688 || ^11.0.0",
+    "@angular/common": "^10.0.0-sha-c372688 || ^11.0.0",
+    "@ajf/core": "10.0.0-sha-c372688",
+    "@ajf/ionic": "10.0.0-sha-c372688",
     "tslib": "^2.0.0"
   },
   "main": "./bundles/ajf-examples.umd.js",
