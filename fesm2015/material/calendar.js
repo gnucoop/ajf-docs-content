@@ -7,13 +7,13 @@ import { ɵɵdefineComponent, ɵɵelement, ɵsetClassMetadata, Component, ɵɵde
 class MaterialCalendarSimpleExample {
 }
 MaterialCalendarSimpleExample.ɵfac = function MaterialCalendarSimpleExample_Factory(t) { return new (t || MaterialCalendarSimpleExample)(); };
-MaterialCalendarSimpleExample.ɵcmp = ɵɵdefineComponent({ type: MaterialCalendarSimpleExample, selectors: [["calendar-simple-example"]], decls: 1, vars: 0, template: function MaterialCalendarSimpleExample_Template(rf, ctx) { if (rf & 1) {
+MaterialCalendarSimpleExample.ɵcmp = ɵɵdefineComponent({ type: MaterialCalendarSimpleExample, selectors: [["material-calendar-simple-example"]], decls: 1, vars: 0, template: function MaterialCalendarSimpleExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "ajf-calendar");
     } }, directives: [AjfCalendarComponent], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MaterialCalendarSimpleExample, [{
         type: Component,
         args: [{
-                selector: 'calendar-simple-example',
+                selector: 'material-calendar-simple-example',
                 templateUrl: 'calendar-simple-example.html',
                 styleUrls: ['calendar-simple-example.css'],
             }]

@@ -10,20 +10,24 @@
     var IonicCalendarSimpleExample = /** @class */ (function () {
         function IonicCalendarSimpleExample() {
         }
-        IonicCalendarSimpleExample.ɵfac = function IonicCalendarSimpleExample_Factory(t) { return new (t || IonicCalendarSimpleExample)(); };
-        IonicCalendarSimpleExample.ɵcmp = i0["ɵɵdefineComponent"]({ type: IonicCalendarSimpleExample, selectors: [["calendar-simple-example"]], decls: 1, vars: 0, template: function IonicCalendarSimpleExample_Template(rf, ctx) { if (rf & 1) {
-                i0["ɵɵelement"](0, "ajf-calendar");
-            } }, directives: [i1.AjfCalendarComponent], styles: [""] });
         return IonicCalendarSimpleExample;
     }());
-    /*@__PURE__*/ (function () { i0["ɵsetClassMetadata"](IonicCalendarSimpleExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'calendar-simple-example',
-                    templateUrl: 'calendar-simple-example.html',
-                    styleUrls: ['calendar-simple-example.css'],
-                }]
-        }], null, null); })();
+    IonicCalendarSimpleExample.ɵfac = function IonicCalendarSimpleExample_Factory(t) { return new (t || IonicCalendarSimpleExample)(); };
+    IonicCalendarSimpleExample.ɵcmp = i0["ɵɵdefineComponent"]({ type: IonicCalendarSimpleExample, selectors: [["ionic-calendar-simple-example"]], decls: 1, vars: 0, template: function IonicCalendarSimpleExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0["ɵɵelement"](0, "ajf-calendar");
+            }
+        }, directives: [i1.AjfCalendarComponent], styles: [""] });
+    /*@__PURE__*/ (function () {
+        i0["ɵsetClassMetadata"](IonicCalendarSimpleExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'ionic-calendar-simple-example',
+                        templateUrl: 'calendar-simple-example.html',
+                        styleUrls: ['calendar-simple-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         IonicCalendarSimpleExample,
@@ -31,23 +35,25 @@
     var CalendarExamplesModule = /** @class */ (function () {
         function CalendarExamplesModule() {
         }
-        CalendarExamplesModule.ɵmod = i0["ɵɵdefineNgModule"]({ type: CalendarExamplesModule });
-        CalendarExamplesModule.ɵinj = i0["ɵɵdefineInjector"]({ factory: function CalendarExamplesModule_Factory(t) { return new (t || CalendarExamplesModule)(); }, imports: [[
-                    i1.AjfCalendarModule,
-                ]] });
         return CalendarExamplesModule;
     }());
+    CalendarExamplesModule.ɵmod = i0["ɵɵdefineNgModule"]({ type: CalendarExamplesModule });
+    CalendarExamplesModule.ɵinj = i0["ɵɵdefineInjector"]({ factory: function CalendarExamplesModule_Factory(t) { return new (t || CalendarExamplesModule)(); }, imports: [[
+                i1.AjfCalendarModule,
+            ]] });
     (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0["ɵɵsetNgModuleScope"](CalendarExamplesModule, { declarations: [IonicCalendarSimpleExample], imports: [i1.AjfCalendarModule], exports: [IonicCalendarSimpleExample] }); })();
-    /*@__PURE__*/ (function () { i0["ɵsetClassMetadata"](CalendarExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i1.AjfCalendarModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                }]
-        }], null, null); })();
+    /*@__PURE__*/ (function () {
+        i0["ɵsetClassMetadata"](CalendarExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i1.AjfCalendarModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

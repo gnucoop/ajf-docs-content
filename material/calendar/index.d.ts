@@ -1,6 +1,6 @@
-import { MaterialCalendarSimpleExample } from './calendar-simple/calendar-simple-example';
+import { MaterialCalendarSimpleExample } from './material-calendar-simple/calendar-simple-example';
 import * as i0 from "@angular/core";
-import * as i1 from "./calendar-simple/calendar-simple-example";
+import * as i1 from "./material-calendar-simple/calendar-simple-example";
 import * as i2 from "@ajf/material/calendar";
 export { MaterialCalendarSimpleExample, };
 export declare class CalendarExamplesModule {

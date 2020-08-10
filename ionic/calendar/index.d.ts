@@ -1,6 +1,6 @@
-import { IonicCalendarSimpleExample } from './calendar-simple/calendar-simple-example';
+import { IonicCalendarSimpleExample } from './ionic-calendar-simple/calendar-simple-example';
 import * as i0 from "@angular/core";
-import * as i1 from "./calendar-simple/calendar-simple-example";
+import * as i1 from "./ionic-calendar-simple/calendar-simple-example";
 import * as i2 from "@ajf/ionic/calendar";
 export { IonicCalendarSimpleExample, };
 export declare class CalendarExamplesModule {

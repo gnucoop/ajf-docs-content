@@ -7,13 +7,13 @@ import { ɵɵdefineComponent, ɵɵelement, ɵsetClassMetadata, Component, ɵɵde
 class IonicCalendarSimpleExample {
 }
 IonicCalendarSimpleExample.ɵfac = function IonicCalendarSimpleExample_Factory(t) { return new (t || IonicCalendarSimpleExample)(); };
-IonicCalendarSimpleExample.ɵcmp = ɵɵdefineComponent({ type: IonicCalendarSimpleExample, selectors: [["calendar-simple-example"]], decls: 1, vars: 0, template: function IonicCalendarSimpleExample_Template(rf, ctx) { if (rf & 1) {
+IonicCalendarSimpleExample.ɵcmp = ɵɵdefineComponent({ type: IonicCalendarSimpleExample, selectors: [["ionic-calendar-simple-example"]], decls: 1, vars: 0, template: function IonicCalendarSimpleExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "ajf-calendar");
     } }, directives: [AjfCalendarComponent], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(IonicCalendarSimpleExample, [{
         type: Component,
         args: [{
-                selector: 'calendar-simple-example',
+                selector: 'ionic-calendar-simple-example',
                 templateUrl: 'calendar-simple-example.html',
                 styleUrls: ['calendar-simple-example.css'],
             }]
