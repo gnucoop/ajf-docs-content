@@ -359,6 +359,70 @@
 
 
 
+    
+      
+
+<h4 id="AjfWidgetService" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="AjfWidgetService"></span>
+  <code>AjfWidgetService</code>
+  
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>componentsMap: AjfWidgetComponentsMap</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">registerCustomWidget
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        widget</p>
+      <code class="docs-api-method-parameter-type">{ widgetType</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
     <h3 id="core-reports-interfaces" class="docs-header-link docs-api-h3">
       <span header-link="interfaces"></span>
       Interfaces
@@ -2610,6 +2674,7 @@
     inputs?: {
         [key: string]: any;
     };
+    initInstance?: (widgetInstance: AjfWidgetInstance, context: AjfContext, translateService: TranslateService) =&gt; AjfWidgetInstance;
 }</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
