@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@ajf/material/calendar'), require('@angular/core')) :
     typeof define === 'function' && define.amd ? define('@ajf/ajf-examples/material/calendar', ['exports', '@ajf/material/calendar', '@angular/core'], factory) :
-    (global = global || self, factory((global.ajf = global.ajf || {}, global.ajf.ajfExamples = global.ajf.ajfExamples || {}, global.ajf.ajfExamples.material = global.ajf.ajfExamples.material || {}, global.ajf.ajfExamples.material.calendar = {}), global.ng.material.calendar, global.ng.core));
+    (global = global || self, factory((global.ajf = global.ajf || {}, global.ajf.ajfExamples = global.ajf.ajfExamples || {}, global.ajf.ajfExamples.material = global.ajf.ajfExamples.material || {}, global.ajf.ajfExamples.material.calendar = {}), global.ajf.material.calendar, global.ng.core));
 }(this, (function (exports, i1, i0) { 'use strict';
 
     /**
