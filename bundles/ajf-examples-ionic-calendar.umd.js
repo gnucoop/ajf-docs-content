@@ -18,8 +18,8 @@
                 i0["ɵɵelement"](0, "ajf-calendar");
             }
         }, directives: [i1.AjfCalendarComponent], styles: [""] });
-    /*@__PURE__*/ (function () {
-        i0["ɵsetClassMetadata"](IonicCalendarSimpleExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0["ɵsetClassMetadata"](IonicCalendarSimpleExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'ionic-calendar-simple-example',
@@ -42,8 +42,8 @@
                 i1.AjfCalendarModule,
             ]] });
     (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0["ɵɵsetNgModuleScope"](CalendarExamplesModule, { declarations: [IonicCalendarSimpleExample], imports: [i1.AjfCalendarModule], exports: [IonicCalendarSimpleExample] }); })();
-    /*@__PURE__*/ (function () {
-        i0["ɵsetClassMetadata"](CalendarExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0["ɵsetClassMetadata"](CalendarExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

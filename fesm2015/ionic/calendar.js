@@ -10,7 +10,7 @@ IonicCalendarSimpleExample.ɵfac = function IonicCalendarSimpleExample_Factory(t
 IonicCalendarSimpleExample.ɵcmp = ɵɵdefineComponent({ type: IonicCalendarSimpleExample, selectors: [["ionic-calendar-simple-example"]], decls: 1, vars: 0, template: function IonicCalendarSimpleExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "ajf-calendar");
     } }, directives: [AjfCalendarComponent], styles: [""] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(IonicCalendarSimpleExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(IonicCalendarSimpleExample, [{
         type: Component,
         args: [{
                 selector: 'ionic-calendar-simple-example',
@@ -29,7 +29,7 @@ CalendarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CalendarEx
             AjfCalendarModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CalendarExamplesModule, { declarations: [IonicCalendarSimpleExample], imports: [AjfCalendarModule], exports: [IonicCalendarSimpleExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CalendarExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CalendarExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

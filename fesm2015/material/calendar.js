@@ -10,7 +10,7 @@ MaterialCalendarSimpleExample.ɵfac = function MaterialCalendarSimpleExample_Fac
 MaterialCalendarSimpleExample.ɵcmp = ɵɵdefineComponent({ type: MaterialCalendarSimpleExample, selectors: [["material-calendar-simple-example"]], decls: 1, vars: 0, template: function MaterialCalendarSimpleExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "ajf-calendar");
     } }, directives: [AjfCalendarComponent], styles: [""] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MaterialCalendarSimpleExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MaterialCalendarSimpleExample, [{
         type: Component,
         args: [{
                 selector: 'material-calendar-simple-example',
@@ -29,7 +29,7 @@ CalendarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CalendarEx
             AjfCalendarModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CalendarExamplesModule, { declarations: [MaterialCalendarSimpleExample], imports: [AjfCalendarModule], exports: [MaterialCalendarSimpleExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CalendarExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CalendarExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

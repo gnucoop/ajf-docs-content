@@ -1,7 +1,7 @@
-<span class="hljs-keyword">import</span> {AjfCalendarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@ajf/ionic/calendar'</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {AjfCalendarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@ajf/ionic/calendar&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
-<span class="hljs-keyword">import</span> {IonicCalendarSimpleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./ionic-calendar-simple/calendar-simple-example'</span>;
+<span class="hljs-keyword">import</span> {IonicCalendarSimpleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./ionic-calendar-simple/calendar-simple-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   IonicCalendarSimpleExample,
@@ -12,11 +12,11 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     AjfCalendarModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CalendarExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CalendarExamplesModule</span> </span>{
 }

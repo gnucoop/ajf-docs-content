@@ -8546,7 +8546,7 @@
   <code>AjfVideoProvider</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfVideoProvider = <span class="hljs-string">'youtube'</span> | <span class="hljs-string">'vimeo'</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfVideoProvider = <span class="hljs-string">&#x27;youtube&#x27;</span> | <span class="hljs-string">&#x27;vimeo&#x27;</span>;</code>
 </pre>
 </div>
 
@@ -8572,7 +8572,7 @@
   <code>AjfChoicesFunction</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesFunction = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> AjfChoice&lt;T&gt;[];</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesFunction = <span class="hljs-function">() =&gt;</span> AjfChoice&lt;T&gt;[];</code>
 </pre>
 </div>
 
@@ -8585,7 +8585,7 @@
   <code>AjfChoicesOriginType</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesOriginType = <span class="hljs-string">'fixed'</span> | <span class="hljs-string">'function'</span> | <span class="hljs-string">'observable'</span> | <span class="hljs-string">'observableArray'</span> | <span class="hljs-string">'promise'</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesOriginType = <span class="hljs-string">&#x27;fixed&#x27;</span> | <span class="hljs-string">&#x27;function&#x27;</span> | <span class="hljs-string">&#x27;observable&#x27;</span> | <span class="hljs-string">&#x27;observableArray&#x27;</span> | <span class="hljs-string">&#x27;promise&#x27;</span>;</code>
 </pre>
 </div>
 
@@ -8598,7 +8598,7 @@
   <code>AjfFieldSize</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfFieldSize = <span class="hljs-string">'normal'</span> | <span class="hljs-string">'small'</span> | <span class="hljs-string">'smaller'</span> | <span class="hljs-string">'tiny'</span> | <span class="hljs-string">'mini'</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfFieldSize = <span class="hljs-string">&#x27;normal&#x27;</span> | <span class="hljs-string">&#x27;small&#x27;</span> | <span class="hljs-string">&#x27;smaller&#x27;</span> | <span class="hljs-string">&#x27;tiny&#x27;</span> | <span class="hljs-string">&#x27;mini&#x27;</span>;</code>
 </pre>
 </div>
 
@@ -8637,7 +8637,7 @@
   <code>AjfChoicesFixedOriginCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesFixedOriginCreate = Omit&lt;AjfChoicesOriginCreate&lt;T&gt;, <span class="hljs-string">'type'</span>&gt; &amp; Partial&lt;AjfChoicesFixedOrigin&lt;T&gt;&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesFixedOriginCreate = Omit&lt;AjfChoicesOriginCreate&lt;T&gt;, <span class="hljs-string">&#x27;type&#x27;</span>&gt; &amp; Partial&lt;AjfChoicesFixedOrigin&lt;T&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -8650,7 +8650,7 @@
   <code>AjfChoicesFunctionOriginCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesFunctionOriginCreate = Omit&lt;AjfChoicesOriginCreate&lt;T&gt;, <span class="hljs-string">'type'</span>&gt; &amp; Pick&lt;AjfChoicesFunctionOrigin&lt;T&gt;, <span class="hljs-string">'generator'</span>&gt; &amp; Partial&lt;AjfChoicesFunctionOrigin&lt;T&gt;&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesFunctionOriginCreate = Omit&lt;AjfChoicesOriginCreate&lt;T&gt;, <span class="hljs-string">&#x27;type&#x27;</span>&gt; &amp; Pick&lt;AjfChoicesFunctionOrigin&lt;T&gt;, <span class="hljs-string">&#x27;generator&#x27;</span>&gt; &amp; Partial&lt;AjfChoicesFunctionOrigin&lt;T&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -8663,7 +8663,7 @@
   <code>AjfChoicesObservableArrayOriginCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesObservableArrayOriginCreate = Omit&lt;AjfChoicesOriginCreate&lt;T&gt;, <span class="hljs-string">'type'</span>&gt; &amp; Pick&lt;AjfChoicesObservableArrayOrigin&lt;T&gt;, <span class="hljs-string">'generator'</span>&gt; &amp; Partial&lt;AjfChoicesObservableArrayOrigin&lt;T&gt;&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesObservableArrayOriginCreate = Omit&lt;AjfChoicesOriginCreate&lt;T&gt;, <span class="hljs-string">&#x27;type&#x27;</span>&gt; &amp; Pick&lt;AjfChoicesObservableArrayOrigin&lt;T&gt;, <span class="hljs-string">&#x27;generator&#x27;</span>&gt; &amp; Partial&lt;AjfChoicesObservableArrayOrigin&lt;T&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -8676,7 +8676,7 @@
   <code>AjfChoicesObservableOriginCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesObservableOriginCreate = Omit&lt;AjfChoicesOriginCreate&lt;T&gt;, <span class="hljs-string">'type'</span>&gt; &amp; Pick&lt;AjfChoicesObservableOrigin&lt;T&gt;, <span class="hljs-string">'generator'</span>&gt; &amp; Partial&lt;AjfChoicesObservableOrigin&lt;T&gt;&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesObservableOriginCreate = Omit&lt;AjfChoicesOriginCreate&lt;T&gt;, <span class="hljs-string">&#x27;type&#x27;</span>&gt; &amp; Pick&lt;AjfChoicesObservableOrigin&lt;T&gt;, <span class="hljs-string">&#x27;generator&#x27;</span>&gt; &amp; Partial&lt;AjfChoicesObservableOrigin&lt;T&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -8689,7 +8689,7 @@
   <code>AjfChoicesOriginCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesOriginCreate = Pick&lt;AjfChoicesOrigin&lt;<span class="hljs-built_in">any</span>&gt;, <span class="hljs-string">'type'</span> | <span class="hljs-string">'name'</span>&gt; &amp; Partial&lt;AjfChoicesOrigin&lt;T&gt;&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesOriginCreate = Pick&lt;AjfChoicesOrigin&lt;<span class="hljs-built_in">any</span>&gt;, <span class="hljs-string">&#x27;type&#x27;</span> | <span class="hljs-string">&#x27;name&#x27;</span>&gt; &amp; Partial&lt;AjfChoicesOrigin&lt;T&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -8702,7 +8702,7 @@
   <code>AjfChoicesPromiseOriginCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesPromiseOriginCreate = Omit&lt;AjfChoicesOriginCreate&lt;T&gt;, <span class="hljs-string">'type'</span>&gt; &amp; Pick&lt;AjfChoicesPromiseOrigin&lt;T&gt;, <span class="hljs-string">'generator'</span>&gt; &amp; Partial&lt;AjfChoicesPromiseOrigin&lt;T&gt;&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesPromiseOriginCreate = Omit&lt;AjfChoicesOriginCreate&lt;T&gt;, <span class="hljs-string">&#x27;type&#x27;</span>&gt; &amp; Pick&lt;AjfChoicesPromiseOrigin&lt;T&gt;, <span class="hljs-string">&#x27;generator&#x27;</span>&gt; &amp; Partial&lt;AjfChoicesPromiseOrigin&lt;T&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -8715,7 +8715,7 @@
   <code>AjfFieldCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfFieldCreate = Omit&lt;AjfNodeCreate, <span class="hljs-string">'nodeType'</span>&gt; &amp; Pick&lt;AjfField, <span class="hljs-string">'fieldType'</span>&gt; &amp; Partial&lt;AjfField&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfFieldCreate = Omit&lt;AjfNodeCreate, <span class="hljs-string">&#x27;nodeType&#x27;</span>&gt; &amp; Pick&lt;AjfField, <span class="hljs-string">&#x27;fieldType&#x27;</span>&gt; &amp; Partial&lt;AjfField&gt;;</code>
 </pre>
 </div>
 
@@ -8780,7 +8780,7 @@
   <code>AjfNodeCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfNodeCreate = Pick&lt;AjfNode, <span class="hljs-string">'nodeType'</span> | <span class="hljs-string">'id'</span> | <span class="hljs-string">'parent'</span> | <span class="hljs-string">'name'</span>&gt; &amp; Partial&lt;AjfNode&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfNodeCreate = Pick&lt;AjfNode, <span class="hljs-string">&#x27;nodeType&#x27;</span> | <span class="hljs-string">&#x27;id&#x27;</span> | <span class="hljs-string">&#x27;parent&#x27;</span> | <span class="hljs-string">&#x27;name&#x27;</span>&gt; &amp; Partial&lt;AjfNode&gt;;</code>
 </pre>
 </div>
 
@@ -8793,7 +8793,7 @@
   <code>AjfNodeInstanceCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfNodeInstanceCreate = Pick&lt;AjfNodeInstance, <span class="hljs-string">'node'</span>&gt; &amp; Partial&lt;AjfNodeInstance&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfNodeInstanceCreate = Pick&lt;AjfNodeInstance, <span class="hljs-string">&#x27;node&#x27;</span>&gt; &amp; Partial&lt;AjfNodeInstance&gt;;</code>
 </pre>
 </div>
 
