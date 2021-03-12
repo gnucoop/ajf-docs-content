@@ -13,13 +13,13 @@
         return MaterialCalendarSimpleExample;
     }());
     MaterialCalendarSimpleExample.ɵfac = function MaterialCalendarSimpleExample_Factory(t) { return new (t || MaterialCalendarSimpleExample)(); };
-    MaterialCalendarSimpleExample.ɵcmp = i0["ɵɵdefineComponent"]({ type: MaterialCalendarSimpleExample, selectors: [["material-calendar-simple-example"]], decls: 1, vars: 0, template: function MaterialCalendarSimpleExample_Template(rf, ctx) {
+    MaterialCalendarSimpleExample.ɵcmp = i0.ɵɵdefineComponent({ type: MaterialCalendarSimpleExample, selectors: [["material-calendar-simple-example"]], decls: 1, vars: 0, template: function MaterialCalendarSimpleExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0["ɵɵelement"](0, "ajf-calendar");
+                i0.ɵɵelement(0, "ajf-calendar");
             }
         }, directives: [i1.AjfCalendarComponent], styles: [""] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0["ɵsetClassMetadata"](MaterialCalendarSimpleExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MaterialCalendarSimpleExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'material-calendar-simple-example',
@@ -37,13 +37,13 @@
         }
         return CalendarExamplesModule;
     }());
-    CalendarExamplesModule.ɵmod = i0["ɵɵdefineNgModule"]({ type: CalendarExamplesModule });
-    CalendarExamplesModule.ɵinj = i0["ɵɵdefineInjector"]({ factory: function CalendarExamplesModule_Factory(t) { return new (t || CalendarExamplesModule)(); }, imports: [[
+    CalendarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CalendarExamplesModule });
+    CalendarExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CalendarExamplesModule_Factory(t) { return new (t || CalendarExamplesModule)(); }, imports: [[
                 i1.AjfCalendarModule,
             ]] });
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0["ɵɵsetNgModuleScope"](CalendarExamplesModule, { declarations: [MaterialCalendarSimpleExample], imports: [i1.AjfCalendarModule], exports: [MaterialCalendarSimpleExample] }); })();
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CalendarExamplesModule, { declarations: [MaterialCalendarSimpleExample], imports: [i1.AjfCalendarModule], exports: [MaterialCalendarSimpleExample] }); })();
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0["ɵsetClassMetadata"](CalendarExamplesModule, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CalendarExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [
