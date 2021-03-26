@@ -13,7 +13,7 @@
         return MaterialCalendarSimpleExample;
     }());
     MaterialCalendarSimpleExample.ɵfac = function MaterialCalendarSimpleExample_Factory(t) { return new (t || MaterialCalendarSimpleExample)(); };
-    MaterialCalendarSimpleExample.ɵcmp = i0.ɵɵdefineComponent({ type: MaterialCalendarSimpleExample, selectors: [["material-calendar-simple-example"]], decls: 1, vars: 0, template: function MaterialCalendarSimpleExample_Template(rf, ctx) {
+    MaterialCalendarSimpleExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MaterialCalendarSimpleExample, selectors: [["material-calendar-simple-example"]], decls: 1, vars: 0, template: function MaterialCalendarSimpleExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelement(0, "ajf-calendar");
             }
@@ -37,11 +37,11 @@
         }
         return CalendarExamplesModule;
     }());
-    CalendarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CalendarExamplesModule });
-    CalendarExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CalendarExamplesModule_Factory(t) { return new (t || CalendarExamplesModule)(); }, imports: [[
+    CalendarExamplesModule.ɵfac = function CalendarExamplesModule_Factory(t) { return new (t || CalendarExamplesModule)(); };
+    CalendarExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CalendarExamplesModule });
+    CalendarExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i1.AjfCalendarModule,
             ]] });
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CalendarExamplesModule, { declarations: [MaterialCalendarSimpleExample], imports: [i1.AjfCalendarModule], exports: [MaterialCalendarSimpleExample] }); })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CalendarExamplesModule, [{
                 type: i0.NgModule,
@@ -54,6 +54,7 @@
                     }]
             }], null, null);
     })();
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CalendarExamplesModule, { declarations: [MaterialCalendarSimpleExample], imports: [i1.AjfCalendarModule], exports: [MaterialCalendarSimpleExample] }); })();
 
     /**
      * Generated bundle index. Do not edit.
