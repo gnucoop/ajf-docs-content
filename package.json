@@ -1,6 +1,6 @@
 {
   "name": "@ajf/ajf-examples",
-  "version": "12.0.0-next.1",
+  "version": "12.0.0-next.2",
   "private": true,
   "repository": {
     "type": "git",
@@ -20,8 +20,8 @@
   "peerDependencies": {
     "@angular/core": "^12.0.0-0 || ^13.0.0-0",
     "@angular/common": "^12.0.0-0 || ^13.0.0-0",
-    "@ajf/core": "12.0.0-next.1",
-    "@ajf/ionic": "12.0.0-next.1",
+    "@ajf/core": "12.0.0-next.2",
+    "@ajf/ionic": "12.0.0-next.2",
     "tslib": "^2.1.0"
   },
   "main": "./bundles/ajf-examples.umd.js",
