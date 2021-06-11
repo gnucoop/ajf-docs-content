@@ -18,13 +18,12 @@
 <div class="docs-api">
   <h2>
     API reference for Angular Material form-builder
-  </h2>
-
-  <p class="docs-api-module-import">
-    <code>
-      import {AjfFormBuilderModule} from '@ajf/material/form-builder';
-    </code>
-  </p><h3 id="material-form-builder-services" class="docs-header-link docs-api-h3">
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {AjfFormBuilderModule} from '@ajf/material/form-builder';
+      </code>
+    </p>
+  <h3 id="material-form-builder-services" class="docs-header-link docs-api-h3">
       <span header-link="services"></span>
       Services
     </h3>
@@ -74,6 +73,8 @@
     </p>
   </td>
   <td class="docs-api-property-description"><p>Available node types</p>
+<p>@readonly
+@memberOf AjfFormBuilderService</p>
 </td>
 </tr>
 
@@ -183,6 +184,8 @@
     </p>
   </td>
   <td class="docs-api-property-description"><p>Current edited form stream</p>
+<p>@readonly
+@memberOf AjfFormBuilderService</p>
 </td>
 </tr>
 
@@ -572,7 +575,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Triggers the moveNode event when a node is moved in the formbuilder.</p>
+      <p>Triggers the moveNode event when a node is moved in the formbuilder.
+@param nodeEntry The node to be moved.</p>
 
     </td>
   </tr><thead>
@@ -589,8 +593,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The node to be moved.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -755,6 +758,8 @@
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sets the current edited form</p>
+<p>@param form</p>
+<p>@memberOf AjfFormBuilderService</p>
 
     </td>
   </tr><thead>
@@ -1083,7 +1088,9 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Triggers when a field or slide node is moved or inserted by drag&amp;dropping in the formbuilder.</p>
+      <p>Triggers when a field or slide node is moved or inserted by drag&amp;dropping in the formbuilder.
+@param event The drop event.
+@param content True if the current nodeEntry contains other nodeEntries.</p>
 
     </td>
   </tr><thead>
@@ -1100,8 +1107,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The drop event.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1114,8 +1120,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>True if the current nodeEntry contains other nodeEntries.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1437,7 +1442,11 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Triggers when a field or slide node is moved or inserted by drag&amp;dropping in the formbuilder.</p>
+      <p>Triggers when a field or slide node is moved or inserted by drag&amp;dropping in the formbuilder.
+@param event The drop event.
+@param fbService The AjfFormBuilderService.
+@param nodeEntry The current nodeEntry, if present.
+@param content True if the current nodeEntry contains other nodeEntries.</p>
 
     </td>
   </tr><thead>
@@ -1454,8 +1463,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The drop event.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1468,8 +1476,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The AjfFormBuilderService.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1482,8 +1489,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The current nodeEntry, if present.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1496,8 +1502,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>True if the current nodeEntry contains other nodeEntries.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1516,7 +1521,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Disables the drag&amp;drop of Slide items.</p>
+      <p>Disables the drag&amp;drop of Slide items.
+@param item The dragged item.</p>
 
     </td>
   </tr><thead>
@@ -1533,8 +1539,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The dragged item.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1567,7 +1572,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Disables the drag&amp;drop of Field items.</p>
+      <p>Disables the drag&amp;drop of Field items.
+@param item The dragged item.</p>
 
     </td>
   </tr><thead>
@@ -1584,8 +1590,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The dragged item.</p>
-
+        
       </p>
     </td>
   </tr>
