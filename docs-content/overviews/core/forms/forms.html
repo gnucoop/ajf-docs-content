@@ -1,1 +1,561 @@
-<div class="docs-markdown"></div>
+<div class="docs-markdown"><h1>Ajf Forms</h1><p>Ajf uses a json-based format to describe forms, which is documented here.</p>
+<p>The format is relatively low level; while it is possible to write forms as jsons by hand,
+we provide a couple of tools that make the creation and maintenance of forms more user-friendly:</p>
+<ul>
+<li>Forms can be easily written in excel following the <a href="https://github.com/gnucoop/formconv#introduction-to-xlsforms">xlsform standard</a>
+and then converted to ajf forms using the command line utility <a href="https://github.com/gnucoop/formconv">formconv</a>
+or the online converter <a href="https://formconv.herokuapp.com/">https://formconv.herokuapp.com/</a>.</li>
+<li>The <a href="https://dev-mat.ajf.rocks/form-builder">form builder</a> is available,
+which provides a graphical user interface for modifying ajf forms.</li>
+</ul>
+<h2 id="basic-syntax">Basic Syntax</h2>
+
+<p>Let&#39;s start by describing a simple example form:</p>
+<pre><code>{
+    &quot;nodes&quot;: [
+        {
+            &quot;parent&quot;: 0,
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;slide0&quot;,
+            &quot;label&quot;: &quot;Personal Information&quot;,
+            &quot;nodeType&quot;: 3,
+            &quot;nodes&quot;: [
+                {
+                    &quot;parent&quot;: 1,
+                    &quot;id&quot;: 1001,
+                    &quot;name&quot;: &quot;name&quot;,
+                    &quot;label&quot;: &quot;What&#39;s your name?&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 0
+                },
+                {
+                    &quot;parent&quot;: 1001,
+                    &quot;id&quot;: 1002,
+                    &quot;name&quot;: &quot;age&quot;,
+                    &quot;label&quot;: &quot;How old are you?&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 2
+                }
+            ]
+        },
+        {
+            &quot;parent&quot;: 1,
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;slide1&quot;,
+            &quot;label&quot;: &quot;Pet Information&quot;,
+            &quot;nodeType&quot;: 3,
+            &quot;nodes&quot;: [
+                {
+                    &quot;parent&quot;: 2,
+                    &quot;id&quot;: 2001,
+                    &quot;name&quot;: &quot;pet_name&quot;,
+                    &quot;label&quot;: &quot;What&#39;s your pet&#39;s name?&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 0
+                },
+                {
+                    &quot;parent&quot;: 2001,
+                    &quot;id&quot;: 2002,
+                    &quot;name&quot;: &quot;pet_age&quot;,
+                    &quot;label&quot;: &quot;How old is it?&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 2
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+<p>You are encouraged to see how the above form is rendered by setting its form schema in the <a href="https://dev-app.ajf.rocks/mat-forms">Ajf Demo page</a>.</p>
+<p>Ajf forms are composed of &quot;nodes&quot;.
+Nodes are most commonly slides (with nodeType 3) or fields (with nodeType 0);
+other node types are described in the [Node Types section] (#node-types).
+The example form consists of two slides, each one containing two fields.</p>
+<p>Fields also have a type.
+In this form, we have text fields (fieldType 0) and numeric fields (fieldType 2);
+many other [field types] (#field-types) are available, to deal with different user inputs, like dates, files and multiple choice questions.</p>
+<p>Every node has a &quot;name&quot; and a &quot;label&quot;.
+name is used as a string identifier of the node;
+label is the text shown to the user when the form is rendered.</p>
+<p>Every node also has a numerical &quot;id&quot; and a &quot;parent&quot;.
+id can be any positive number, as long as it&#39;s unique in the form.
+parent typically refers to the id of the node immediately above
+(this can be different in forms with [conditional branches] (#conditional-branches)).
+Note that, in the example, node 1002 has node 1001 as parent and not node 1.
+The first slide in the form must have parent 0.</p>
+<h2 id="form-context">Form Context</h2>
+
+<p>To each form instance is associated a context, which holds the value of the form fields, for the questions that have been answered.
+The fields are referenced by name.
+For the previous example, a context might be the object <code>{ pet_name: &quot;Bobby&quot;, pet_age: 3 }</code>.</p>
+<h2 id="node-types">Node Types</h2>
+
+<p>The following node types are available:</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>AjfField</td>
+<td>a form field</td>
+</tr>
+<tr>
+<td>1</td>
+<td>AjfFieldNodeLink</td>
+<td>TODO: what is this?</td>
+</tr>
+<tr>
+<td>2</td>
+<td>AjfNodeGroup</td>
+<td>a [group of nodes] (#node-groups)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>AjfSlide</td>
+<td>a slide</td>
+</tr>
+<tr>
+<td>4</td>
+<td>AjfRepeatingSlide</td>
+<td>a [slide which can be repeated] (#repeating-slides)</td>
+</tr>
+</tbody></table>
+<h2 id="field-types">Field Types</h2>
+
+<p>The following field types are available:</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>String</td>
+<td>a text input</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Text</td>
+<td>a text area</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Number</td>
+<td>a 64-bit floating-point number</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Boolean</td>
+<td>a checkbox, stored as boolean</td>
+</tr>
+<tr>
+<td>4</td>
+<td>SingleChoice</td>
+<td>a [single-choice question] (#choice-questions)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>MultipleChoice</td>
+<td>a [multiple-choice question] (#choice-questions)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Formula</td>
+<td>a [formula] (#formulas)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Empty</td>
+<td>inserts an [HTML note] (#html-notes) in the form</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Date</td>
+<td>a clickable calendar to select a date</td>
+</tr>
+<tr>
+<td>9</td>
+<td>DateInput</td>
+<td>an input to insert a date with an additional dropdown calendar</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Time</td>
+<td>a time in 23:59 format</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Table</td>
+<td>a [table] (#tables)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Geolocation</td>
+<td>a GPS point</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Barcode</td>
+<td>allows scanning a barcode</td>
+</tr>
+<tr>
+<td>14</td>
+<td>File</td>
+<td>allows uploading a file</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Image</td>
+<td>allows uploading an image</td>
+</tr>
+<tr>
+<td>16</td>
+<td>VideoUrl</td>
+<td>the url of a video</td>
+</tr>
+</tbody></table>
+<h2 id="choice-questions">Choice Questions</h2>
+
+<p>The following form contains a single-choice question (fieldType 4) and a multiple-choice question (fieldType 5):</p>
+<pre><code>{
+    &quot;choicesOrigins&quot;: [
+        {
+            &quot;type&quot;: &quot;fixed&quot;,
+            &quot;name&quot;: &quot;foods&quot;,
+            &quot;choicesType&quot;: &quot;string&quot;,
+            &quot;choices&quot;: [
+                {
+                    &quot;label&quot;: &quot;Pizza&quot;,
+                    &quot;value&quot;: &quot;pizza&quot;
+                },
+                {
+                    &quot;label&quot;: &quot;Pasta&quot;,
+                    &quot;value&quot;: &quot;pasta&quot;
+                },
+                {
+                    &quot;label&quot;: &quot;Sushi&quot;,
+                    &quot;value&quot;: &quot;sushi&quot;
+                }
+            ]
+        },
+        {
+            &quot;type&quot;: &quot;fixed&quot;,
+            &quot;name&quot;: &quot;yes_no&quot;,
+            &quot;choicesType&quot;: &quot;string&quot;,
+            &quot;choices&quot;: [
+                {
+                    &quot;label&quot;: &quot;Yes&quot;,
+                    &quot;value&quot;: &quot;yes&quot;
+                },
+                {
+                    &quot;label&quot;: &quot;No&quot;,
+                    &quot;value&quot;: &quot;no&quot;
+                }
+            ]
+        }
+    ],
+    &quot;nodes&quot;: [
+        {
+            &quot;parent&quot;: 0,
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;food_info&quot;,
+            &quot;label&quot;: &quot;Food Information&quot;,
+            &quot;nodeType&quot;: 3,
+            &quot;nodes&quot;: [
+                {
+                    &quot;parent&quot;: 1,
+                    &quot;id&quot;: 1001,
+                    &quot;name&quot;: &quot;hungry&quot;,
+                    &quot;label&quot;: &quot;Are you hungry?&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 4,
+                    &quot;choicesOriginRef&quot;: &quot;yes_no&quot;
+                },
+                {
+                    &quot;parent&quot;: 1001,
+                    &quot;id&quot;: 1002,
+                    &quot;name&quot;: &quot;favorite_foods&quot;,
+                    &quot;label&quot;: &quot;Which food(s) do you like?&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 5,
+                    &quot;choicesOriginRef&quot;: &quot;foods&quot;
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+<p>Again, you can run the form in the <a href="https://dev-app.ajf.rocks/mat-forms">Ajf Demo page</a>.</p>
+<p>The lists of values for choice questions are defined in the &quot;choicesOrigins&quot; property of the form.
+Every &quot;choices origin&quot; list has a name, which allows it to be referenced in the form fields with the &quot;choicesOriginRef&quot; property.</p>
+<p>Each choice has a &quot;label&quot; and a &quot;value&quot;.
+The label is what the user sees when compiling the form, the value is what gets stored in the form context.</p>
+<h2 id="html-notes">HTML Notes</h2>
+
+<p>Fields with type &quot;Empty&quot; (7) allow inserting HTML text snippets in the form:</p>
+<pre><code>{
+    &quot;name&quot;: &quot;link&quot;,
+    &quot;label&quot;: &quot;&quot;,
+    &quot;nodeType&quot;: 0,
+    &quot;fieldType&quot;: 7,
+    &quot;HTML&quot;: &quot;&lt;a href=\&quot;whatever\&quot;&gt;foo&lt;/a&gt;&quot;
+}
+</code></pre>
+<h2 id="hints">Hints</h2>
+
+<p>Fields can have an associated &quot;hint&quot; property, which can provide the user with additional information on how to fill the field:</p>
+<pre><code>{
+    &quot;name&quot;: &quot;store_name&quot;,
+    &quot;label&quot;: &quot;What is the name of this store?&quot;,
+    &quot;nodeType&quot;: 0,
+    &quot;fieldType&quot;: 0,
+    &quot;hint&quot;: &quot;Look at the signboard&quot;
+}
+</code></pre>
+<h2 id="formulas">Formulas</h2>
+
+<p>Fields of type &quot;formula&quot; (6) can be used to compute values based on other fields.</p>
+<p>For example, we can compute the percentage of people that checked-in for an event based on the number of check-ins and the total number of attendees:</p>
+<pre><code>{
+    &quot;nodes&quot;: [
+        {
+            &quot;parent&quot;: 0,
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;check_in_info&quot;,
+            &quot;label&quot;: &quot;Check-in Information&quot;,
+            &quot;nodeType&quot;: 3,
+            &quot;nodes&quot;: [
+                {
+                    &quot;parent&quot;: 1,
+                    &quot;id&quot;: 1001,
+                    &quot;name&quot;: &quot;attendees_total&quot;,
+                    &quot;label&quot;: &quot;Number of people registered for the event&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 2
+                },
+                {
+                    &quot;parent&quot;: 1001,
+                    &quot;id&quot;: 1002,
+                    &quot;name&quot;: &quot;checked_in_num&quot;,
+                    &quot;label&quot;: &quot;Number of check-ins&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 2
+                },
+                {
+                    &quot;parent&quot;: 1002,
+                    &quot;id&quot;: 1003,
+                    &quot;name&quot;: &quot;checked_in_percent&quot;,
+                    &quot;label&quot;: &quot;Percentage of people checked-in&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 6,
+                    &quot;formula&quot;: {
+                        &quot;formula&quot;: &quot;checked_in_num/attendees_total*100&quot;
+                    }
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+<p>Formulas are written in JavaScript and the fields of the form are referenced by name as if they were variables.</p>
+<h2 id="fields-validation">Fields Validation</h2>
+
+<p>It is possible to impose constraints on the values that a field can accept.</p>
+<p>In the following example, the &quot;age&quot; field is flagged as mandatory and required to be an integer smaller than 150:</p>
+<pre><code>{
+    &quot;name&quot;: &quot;age&quot;,
+    &quot;label&quot;: &quot;Your age&quot;,
+    &quot;nodeType&quot;: 0,
+    &quot;fieldType&quot;: 2,
+    &quot;validation&quot;: {
+        &quot;notEmpty&quot;: true,
+        &quot;conditions&quot;: [
+            {
+                &quot;condition&quot;: &quot;isInt(age) &amp;&amp; age &lt; 150&quot;,
+                &quot;clientValidation&quot;: true,
+                &quot;errorMessage&quot;: &quot;The age must be an integer smaller than 150.&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<p>The &quot;validation&quot; object can have the following properties:</p>
+<pre><code>&quot;validation&quot;: {
+    &quot;forceValue&quot; // Forces the field to have the specified value
+    &quot;maxValue&quot;   // Maximum accepted value for a numeric field
+    &quot;minValue&quot;   // Minimum accepted value for a numeric field
+    &quot;notEmpty&quot;   // If true, providing a value is mandatory
+    &quot;maxDigits&quot;  // Maximum number of digits for a numeric field
+    &quot;minDigits&quot;  // Minimum number of digits for a numeric field
+    &quot;conditions&quot; // List of conditions to be satisfied, as in the example above
+}
+</code></pre>
+<h2 id="visibility-conditions">Visibility Conditions</h2>
+
+<p>It is often desirable to show or hide a field depending on the values of previous fields in the form.
+This is achieved using a visibility condition on the field.</p>
+<p>In the following form, driver license information is asked only if the user&#39;s age is al least 18:</p>
+<pre><code>{
+    &quot;nodes&quot;: [
+        {
+            &quot;parent&quot;: 0,
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;personal_info&quot;,
+            &quot;label&quot;: &quot;Personal Information&quot;,
+            &quot;nodeType&quot;: 3,
+            &quot;nodes&quot;: [
+                {
+                    &quot;parent&quot;: 1,
+                    &quot;id&quot;: 1001,
+                    &quot;name&quot;: &quot;age&quot;,
+                    &quot;label&quot;: &quot;Your age&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 2
+                },
+                {
+                    &quot;parent&quot;: 1001,
+                    &quot;id&quot;: 1002,
+                    &quot;name&quot;: &quot;license_id&quot;,
+                    &quot;label&quot;: &quot;Driver license id&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 0,
+                    &quot;visibility&quot;: {
+                        &quot;condition&quot;: &quot;age &gt;= 18&quot;
+                    }
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+<p>Visibility conditions can be applied to any ajf node, including slides.</p>
+<h2 id="repeating-slides">Repeating Slides</h2>
+
+<p>Repeating slides give the user the possibility to repeat a group of questions:</p>
+<pre><code>{
+    &quot;nodes&quot;: [
+        {
+            &quot;parent&quot;: 0,
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;child_repeat&quot;,
+            &quot;label&quot;: &quot;Answer the following questions for each one of your children&quot;,
+            &quot;nodeType&quot;: 4,
+            &quot;maxReps&quot;: 20,
+            &quot;nodes&quot;: [
+                {
+                    &quot;parent&quot;: 1,
+                    &quot;id&quot;: 1001,
+                    &quot;name&quot;: &quot;name&quot;,
+                    &quot;label&quot;: &quot;Child&#39;s name&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 0
+                },
+                {
+                    &quot;parent&quot;: 1001,
+                    &quot;id&quot;: 1002,
+                    &quot;name&quot;: &quot;age&quot;,
+                    &quot;label&quot;: &quot;Child&#39;s age&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 2
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+<p>When specified, &quot;maxReps&quot; defines an upper bound to how many times the slide can be repeated.</p>
+<p>The form context will contain the number of times the slide has been repeated.
+The values of the repeated fields are stored in the context by appending the slide number to the fields&#39; name.
+Specifically, for the previous form, a possible context could be <code>{ child_repeat: 2, name__0: &quot;Pippo&quot;, age__0: 20, name__1: &quot;Pluto&quot;, age__1: 10 }</code>.</p>
+<h2 id="choice-filters">Choice Filters</h2>
+
+<p>The list of values for a single- or multiple-choice question can be filtered depending on the answer to previous questions, using the &quot;choicesFilter&quot; property.</p>
+<p>In this example, the second question only shows the cities which are relevant, based on the country selected in the first question:</p>
+<pre><code>{
+    &quot;choicesOrigins&quot;: [
+        {
+            &quot;type&quot;: &quot;fixed&quot;,
+            &quot;name&quot;: &quot;countries&quot;,
+            &quot;choicesType&quot;: &quot;string&quot;,
+            &quot;choices&quot;: [
+                {
+                    &quot;label&quot;: &quot;Italy&quot;,
+                    &quot;value&quot;: &quot;italy&quot;
+                },
+                {
+                    &quot;label&quot;: &quot;Germany&quot;,
+                    &quot;value&quot;: &quot;germany&quot;
+                }
+            ]
+        },
+        {
+            &quot;type&quot;: &quot;fixed&quot;,
+            &quot;name&quot;: &quot;cities&quot;,
+            &quot;choicesType&quot;: &quot;string&quot;,
+            &quot;choices&quot;: [
+                {
+                    &quot;label&quot;: &quot;Milan&quot;,
+                    &quot;value&quot;: &quot;milan&quot;,
+                    &quot;country&quot;: &quot;italy&quot;
+                },
+                {
+                    &quot;label&quot;: &quot;Rome&quot;,
+                    &quot;value&quot;: &quot;rome&quot;,
+                    &quot;country&quot;: &quot;italy&quot;
+                },
+                {
+                    &quot;label&quot;: &quot;Berlin&quot;,
+                    &quot;value&quot;: &quot;berlin&quot;,
+                    &quot;country&quot;: &quot;germany&quot;
+                },
+                {
+                    &quot;label&quot;: &quot;Hamburg&quot;,
+                    &quot;value&quot;: &quot;hamburg&quot;,
+                    &quot;country&quot;: &quot;germany&quot;
+                }
+            ]
+        }
+    ],
+    &quot;nodes&quot;: [
+        {
+            &quot;parent&quot;: 0,
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;slide0&quot;,
+            &quot;label&quot;: &quot;&quot;,
+            &quot;nodeType&quot;: 3,
+            &quot;nodes&quot;: [
+                {
+                    &quot;parent&quot;: 1,
+                    &quot;id&quot;: 1001,
+                    &quot;name&quot;: &quot;user_country&quot;,
+                    &quot;label&quot;: &quot;In which country do you live?&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 4,
+                    &quot;choicesOriginRef&quot;: &quot;countries&quot;
+                },
+                {
+                    &quot;parent&quot;: 1001,
+                    &quot;id&quot;: 1002,
+                    &quot;name&quot;: &quot;user_city&quot;,
+                    &quot;label&quot;: &quot;In which city do you live?&quot;,
+                    &quot;nodeType&quot;: 0,
+                    &quot;fieldType&quot;: 4,
+                    &quot;choicesOriginRef&quot;: &quot;cities&quot;,
+                    &quot;choicesFilter&quot;: {
+                        &quot;formula&quot;: &quot;$choice.country === user_country&quot;
+                    }
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+</div>

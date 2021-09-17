@@ -73,11 +73,62 @@
       <th colspan="2" class="docs-api-method-name-cell">registerCustomField
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>It allows to register custom fields inside an Ajf form.
+@param fieldType is the field type of the custom field. Values from 0 to 100 are reserved to
+    Ajf.
+@param component It is the custom component that implement an AjfBaseFieldComponent.
+@param readOnlyComponent It is the readonly custom component that implement an
+    AjfBaseFieldComponent.
+@createInstance The signature and return type of the method used for create Instance.
+@isFieldWithChoice If true, the field has choices.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
   </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        fieldType</p>
+      <code class="docs-api-method-parameter-type"></code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        component</p>
+      <code class="docs-api-method-parameter-type"></code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        readOnlyComponent</p>
+      <code class="docs-api-method-parameter-type"></code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
   
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
@@ -1246,7 +1297,10 @@
       <code>searchThreshold: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>It represents the threshold below which the choices are displayed
+in expanded mode.</p>
+<p>@readonly</p>
+</td>
 </tr>
 
 
@@ -1310,7 +1364,10 @@
       <code>searchThreshold: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>It represents the threshold below which the choices are displayed
+in expanded mode.</p>
+<p>@readonly</p>
+</td>
 </tr>
 
 
@@ -1380,7 +1437,15 @@
       <th colspan="2" class="docs-api-method-name-cell">goToCell
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>It resets all control.show to false and sets the control.show
+(identified by row and column) to true.</p>
+<p>@param row
+@param column</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1423,7 +1488,16 @@
       <th colspan="2" class="docs-api-method-name-cell">goToNextCell
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>set the current cell show to false and set the next cell show to true.</p>
+<p>@param ev
+@param row
+@param column
+@return {*}</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
