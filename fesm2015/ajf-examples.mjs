@@ -65,4 +65,4 @@ class ExampleData {
  */
 
 export { EXAMPLE_COMPONENTS, ExampleData };
-//# sourceMappingURL=ajf-examples.js.map
+//# sourceMappingURL=ajf-examples.mjs.map

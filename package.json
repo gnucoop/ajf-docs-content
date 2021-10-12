@@ -1,6 +1,6 @@
 {
   "name": "@ajf/ajf-examples",
-  "version": "13.0.0-next.2",
+  "version": "13.0.0-next.8",
   "private": true,
   "repository": {
     "type": "git",
@@ -12,6 +12,38 @@
     "material",
     "components"
   ],
+  "exports": {
+    "./fesm2020": {
+      "default": "./fesm2020"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/index.mjs",
+      "es2020": "./fesm2020/ajf-examples.mjs",
+      "es2015": "./fesm2015/ajf-examples.mjs",
+      "node": "./fesm2015/ajf-examples.mjs",
+      "default": "./fesm2020/ajf-examples.mjs"
+    },
+    "./ionic/calendar": {
+      "types": "./ionic/calendar/calendar_public_index.d.ts",
+      "esm2020": "./esm2020/ionic/calendar/calendar_public_index.mjs",
+      "es2020": "./fesm2020/ionic/calendar.mjs",
+      "es2015": "./fesm2015/ionic/calendar.mjs",
+      "node": "./fesm2015/ionic/calendar.mjs",
+      "default": "./fesm2020/ionic/calendar.mjs"
+    },
+    "./material/calendar": {
+      "types": "./material/calendar/calendar_public_index.d.ts",
+      "esm2020": "./esm2020/material/calendar/calendar_public_index.mjs",
+      "es2020": "./fesm2020/material/calendar.mjs",
+      "es2015": "./fesm2015/material/calendar.mjs",
+      "node": "./fesm2015/material/calendar.mjs",
+      "default": "./fesm2020/material/calendar.mjs"
+    }
+  },
   "license": "AGPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/gnucoop/ajf/issues"
@@ -20,14 +52,15 @@
   "peerDependencies": {
     "@angular/core": "^13.0.0-0 || ^14.0.0-0",
     "@angular/common": "^13.0.0-0 || ^14.0.0-0",
-    "@ajf/core": "13.0.0-next.2",
-    "@ajf/ionic": "13.0.0-next.2",
+    "@ajf/core": "13.0.0-next.8",
+    "@ajf/ionic": "13.0.0-next.8",
     "tslib": "^2.2.0"
   },
-  "main": "./bundles/ajf-examples.umd.js",
-  "fesm2015": "./fesm2015/ajf-examples.js",
-  "esm2015": "./esm2015/index.js",
+  "fesm2020": "./fesm2020/ajf-examples.mjs",
+  "fesm2015": "./fesm2015/ajf-examples.mjs",
+  "esm2020": "./esm2020/index.mjs",
   "typings": "./index.d.ts",
-  "module": "./fesm2015/ajf-examples.js",
-  "es2015": "./fesm2015/ajf-examples.js"
+  "module": "./fesm2015/ajf-examples.mjs",
+  "es2020": "./fesm2020/ajf-examples.mjs",
+  "type": "module"
 }

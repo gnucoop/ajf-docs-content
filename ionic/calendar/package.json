@@ -1,9 +1,9 @@
 {
   "name": "@ajf/ajf-examples/ionic/calendar",
-  "main": "../../bundles/ajf-examples-ionic-calendar.umd.js",
-  "fesm2015": "../../fesm2015/ionic/calendar.js",
-  "esm2015": "../../esm2015/ionic/calendar/calendar_public_index.js",
+  "fesm2020": "../../fesm2020/ionic/calendar.mjs",
+  "fesm2015": "../../fesm2015/ionic/calendar.mjs",
+  "esm2020": "../../esm2020/ionic/calendar/calendar_public_index.mjs",
   "typings": "./calendar_public_index.d.ts",
-  "module": "../../fesm2015/ionic/calendar.js",
-  "es2015": "../../fesm2015/ionic/calendar.js"
+  "module": "../../fesm2015/ionic/calendar.mjs",
+  "es2020": "../../fesm2020/ionic/calendar.mjs"
 }
