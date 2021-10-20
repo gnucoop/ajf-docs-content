@@ -15,22 +15,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             args: [{ selector: 'material-calendar-simple-example', template: "<ajf-calendar></ajf-calendar>\n", styles: [""] }]
         }] });
 
-const EXAMPLES = [
-    MaterialCalendarSimpleExample,
-];
+const EXAMPLES = [MaterialCalendarSimpleExample];
 class CalendarExamplesModule {
 }
 CalendarExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CalendarExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 CalendarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CalendarExamplesModule, declarations: [MaterialCalendarSimpleExample], imports: [AjfCalendarModule], exports: [MaterialCalendarSimpleExample] });
-CalendarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CalendarExamplesModule, imports: [[
-            AjfCalendarModule,
-        ]] });
+CalendarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CalendarExamplesModule, imports: [[AjfCalendarModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CalendarExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        AjfCalendarModule,
-                    ],
+                    imports: [AjfCalendarModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
