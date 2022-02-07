@@ -334,6 +334,51 @@
 
 
 
+    
+      
+
+<h4 id="Instances" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="Instances"></span>
+  <code>Instances</code>
+</h4>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MainForm" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MainForm"></span>
+  <code>MainForm</code>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>reps: Instances</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
     <h3 id="core-models-functions" class="docs-header-link docs-api-h3">
       <span header-link="functions"></span>
       Functions
@@ -1058,7 +1103,7 @@ If formula.formula is not defined will be assigned &#39;&#39;.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        digits</p>
+        digits<span class="docs-api-method-parameter-optional-marker">?</span></p>
       <code class="docs-api-method-parameter-type">number</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2192,8 +2237,8 @@ extractArraySum([{a: 5}, {b: 1}, {a: 5, b: 1}], [&#39;a&#39;, &#39;b&#39;]); =&g
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        forms</p>
-      <code class="docs-api-method-parameter-type">Form[]</code>
+        mainforms</p>
+      <code class="docs-api-method-parameter-type">MainForm[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2283,13 +2328,15 @@ extractArraySum([{a: 5}, {b: 1}, {a: 5, b: 1}], [&#39;a&#39;, &#39;b&#39;]); =&g
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">COUNTFORMS
+      <th colspan="2" class="docs-api-method-name-cell">COUNT_FORMS
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Counts the collected forms. The form name must be specified. An optional condition can be added
-to discriminate which forms to count in.</p>
+to discriminate which forms to count in.
+the expression is first evaluated in mainForm if false the evaluation of expression is calculated
+in any reps. If expression is true in reps the form is counted</p>
 
     </td>
   </tr><thead>
@@ -2301,8 +2348,8 @@ to discriminate which forms to count in.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        forms</p>
-      <code class="docs-api-method-parameter-type">Form[]</code>
+        formList</p>
+      <code class="docs-api-method-parameter-type">MainForm[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2347,7 +2394,72 @@ to discriminate which forms to count in.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">COUNTFORMS_UNIQUE
+      <th colspan="2" class="docs-api-method-name-cell">COUNT_REPS
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Counts the reps of the form.
+the expression is first evaluated in mainForm  if true return all reps counting else the evaluation of expression is calculated
+in any reps and return the count of all reps that satisfied the expression.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        formList</p>
+      <code class="docs-api-method-parameter-type">MainForm[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        expression</p>
+      <code class="docs-api-method-parameter-type">string = &#39;true&#39;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">COUNT_FORMS_UNIQUE
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
@@ -2442,8 +2554,8 @@ which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        forms</p>
-      <code class="docs-api-method-parameter-type">Form[]</code>
+        mainForms</p>
+      <code class="docs-api-method-parameter-type">(MainForm | Form)[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2455,7 +2567,7 @@ which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        expression</p>
+        field</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2468,8 +2580,8 @@ which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        condition<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">string</code>
+        condition</p>
+      <code class="docs-api-method-parameter-type">string = &#39;true&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2520,7 +2632,7 @@ discriminate which forms to take for the sum.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         forms</p>
-      <code class="docs-api-method-parameter-type">Form[]</code>
+      <code class="docs-api-method-parameter-type">(MainForm | Form)[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2532,7 +2644,7 @@ discriminate which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        expression</p>
+        fieldName</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2548,7 +2660,7 @@ discriminate which forms to take for the sum.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
+      <code class="docs-api-method-returns-type">string</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2646,7 +2758,7 @@ discriminate which forms to take for the sum.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         forms</p>
-      <code class="docs-api-method-parameter-type">Form[]</code>
+      <code class="docs-api-method-parameter-type">(MainForm | Form)[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2687,7 +2799,7 @@ discriminate which forms to take for the sum.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
+      <code class="docs-api-method-returns-type">string</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2722,7 +2834,7 @@ discriminate which forms to take for the sum.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         forms</p>
-      <code class="docs-api-method-parameter-type">Form[]</code>
+      <code class="docs-api-method-parameter-type">(MainForm | Form)[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2785,7 +2897,7 @@ discriminate which forms to take for the sum.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         forms</p>
-      <code class="docs-api-method-parameter-type">Form[]</code>
+      <code class="docs-api-method-parameter-type">(MainForm | Form)[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2813,7 +2925,7 @@ discriminate which forms to take for the sum.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number</code>
+      <code class="docs-api-method-returns-type">string</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2848,7 +2960,7 @@ discriminate which forms to take for the sum.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         forms</p>
-      <code class="docs-api-method-parameter-type">Form[]</code>
+      <code class="docs-api-method-parameter-type">(MainForm | Form)[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2957,7 +3069,7 @@ discriminate which forms to take for the sum.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>@param forms the form data
-@param values all values of iteration
+@param iterations all values of iteration
 @param fn the fuction of expression-utils to apply at iteration
 @param param1 first param of fn
 @param param2 second param of fn
@@ -2975,7 +3087,7 @@ discriminate which forms to take for the sum.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         forms</p>
-      <code class="docs-api-method-parameter-type">Form[]</code>
+      <code class="docs-api-method-parameter-type">MainForm[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2987,7 +3099,7 @@ discriminate which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        values</p>
+        iterations</p>
       <code class="docs-api-method-parameter-type">string[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -3048,6 +3160,1377 @@ discriminate which forms to take for the sum.</p>
       <p class="docs-api-method-returns-description">
         <p>the result of fn applied to all values param conditions
 &amp;current is an anchor key, The params with &amp;current will be modified with the iteration values.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">APPLY
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>this function allow to define a new attribute of mainform.
+the attribute field will be added on every form and it takes the result of expression calculated
+for every mainform</p>
+<p>@export
+@param {MainForm[]} formList
+@param {string} field
+@param {string} expression
+@return {*}  {MainForm[]}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        formList</p>
+      <code class="docs-api-method-parameter-type">MainForm[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        field</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        expression</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MainForm[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{MainForm[]}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ROUND
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>this function round a number,
+if you need can be define de digits of round</p>
+<p>@export
+@param {(number | string)} num
+@param {number} [digits]
+@return {*}  {number}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        num</p>
+      <code class="docs-api-method-parameter-type">string | number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        digits<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{number}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">EVALUATE
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>this function evalueate a condition if true return branch1 else branch2</p>
+<p>@export
+@param {string} condition
+@param {<em>} branch1
+@param {</em>} branch2
+@return {<em>}  {</em>}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        condition</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        branch1</p>
+      <code class="docs-api-method-parameter-type">any</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        branch2</p>
+      <code class="docs-api-method-parameter-type">any</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">any</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{*}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">BUILD_DATASET
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>This function builds a data structure that allows the use of the hindikit formulas
+for every forms with repeating slides.
+In particular, it builds a main data form with all the data relating to the slides and
+a dictionary with the name reps thus made instance slideName forms.
+Where a form is associated with each instance of the repeating slide.
+example:
+simple form:
+ {
+   $value: &quot;AGO&quot;
+   cittadinanza__0: &quot;AGO&quot;
+   codice_fiscale__0: &quot;jdfljglòkòkò&quot;
+   country__0: &quot;AGO&quot;
+   date_end: &quot;2021-01-10&quot;
+   date_start: &quot;2021-01-10&quot;
+   dob__0: &quot;2021-03-11&quot;
+   first_name__0: &quot;pippo&quot;
+   gender__0: &quot;f&quot;
+   id_family: &quot;3bef3a3f-d95d-4a09-8df4-e812c55c61c6&quot;
+   istruzione__0: null
+   last_name__0: &quot;pippo&quot;
+   permesso_soggiorno__0: &quot;no&quot;
+   relazione__0: &quot;genitore&quot;
+   solidando: &quot;solidando1&quot;
+   stato_civile__0: null
+ }
+after BUILD_DATASET
+MainForm:
+{
+   $value: &quot;AGO&quot;
+   ajf_form_id: 0 ** added atribute that rappresent the index position insides input form list.
+   ajf_family_component_count: 1** added atribute that rappresent the instance number of famili_component repeating slides.
+   date_end: &quot;2021-01-10&quot;
+   date_start: &quot;2021-01-10&quot;
+   id_family: &quot;3bef3a3f-d95d-4a09-8df4-e812c55c61c6&quot;
+   reps: {
+     family_component: [
+       {
+         ajf_family_component_rep: 0 ** added atribute that rappresent the order instance of family_component repeating slide.
+         cittadinanza: &quot;AGO&quot;
+         codice_fiscale: &quot;jdfljglòkòkò&quot;
+         country: &quot;AGO&quot;
+         dob: &quot;2021-03-11&quot;
+         first_name: &quot;pippo&quot;
+         gender: &quot;f&quot;
+         istruzione: null
+         last_name: &quot;pippo&quot;
+         permesso_soggiorno: &quot;no&quot;
+         relazione: &quot;genitore&quot;
+         stato_civile: null
+       }
+     ]
+   }
+}</p>
+<p>@param {Form[]} forms
+@param {<em>} [schema] if schema is provided the instances inside the reps match with effective
+slide name. Otherwise all repeating slides are associates to generic slide name &quot;rep&quot;.
+@return {</em>}  {MainForm[]}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        forms</p>
+      <code class="docs-api-method-parameter-type">Form[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        schema<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">any</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MainForm[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{MainForm[]}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">FILTER_BY
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>This function build a partition of formList by execution of expression.
+For every mainForm the expression match mainform field and replace it.
+If the evaluation of expression is true the mainForm was added to partition
+(that becouse the expression don&#39;t has repeating slide fields) else if
+there are reps for every rep the expression is updated with replacing of
+repeating slide instance fields and evaluated, if true was added to partition.
+All ajf attributes wad updated. /TODO</p>
+<p>@param {MainForm[]} formList a set of main forms
+@param {string} expression to be evaluated. that can be able to contains another
+hindikit functions or mainForm fields or reps fields.
+@return {*}  {MainForm[]}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        formList</p>
+      <code class="docs-api-method-parameter-type">MainForm[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        expression</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MainForm[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{MainForm[]}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">TODAY
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>return the today date</p>
+<p>@export
+@param {string} [format=&#39;yyyy-MM-dd&#39;]
+@return {*}  {string}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        format</p>
+      <code class="docs-api-method-parameter-type">string = &#39;yyyy-MM-dd&#39;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{string}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">CONSOLE_LOG
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>UTILITY FUNCTION
+ this function allow the console log of excel variables.
+@export
+@param {*} val
+@param {string} [text=&#39;log: &#39;]</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        val</p>
+      <code class="docs-api-method-parameter-type">any</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        text</p>
+      <code class="docs-api-method-parameter-type">string = &#39;log</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">GET_AGE
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>this function take a string date and return the difference in year from dob to today.</p>
+<p>@export
+@param {(string | null)} dob
+@return {*}  {number}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dob</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{number}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">LEN
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>this function returns reps length if reps in defined or the length of dataset if dataset is array-</p>
+<p>@export
+@param {(MainForm | any[])} dataset
+@return {*}  {number}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataset</p>
+      <code class="docs-api-method-parameter-type">any[] | MainForm</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{number}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">IS_BEFORE
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>return true if date is before then dateToCompare</p>
+<p>@export
+@param {string} date
+@param {string} dateToCompare
+@return {*}  {boolean}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        date</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dateToCompare</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{boolean}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">IS_AFTER
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>return true if date is after then dateToCompare</p>
+<p>@export
+@param {string} date
+@param {string} dateToCompare
+@return {*}  {boolean}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        date</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dateToCompare</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{boolean}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">IS_WITHIN_INTERVAL
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>return true if date is whithin interval from dateStart to dateEnd</p>
+<p>@export
+@param {string} date
+@param {string} dateStart
+@param {string} dateEnd
+@return {*}  {boolean}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        date</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dateStart</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dateEnd</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{boolean}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">JOIN_FORMS
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>this function extend formsA dataset.
+search all match of keyA in formsB, if found if merge formA and formB.</p>
+<p>@export
+@param {string} keyA
+@param {string} [keyB]
+@return {*}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        keyA</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        keyB<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        formsA</p>
+      <code class="docs-api-method-parameter-type">(MainForm | Form)[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        formsB</p>
+      <code class="docs-api-method-parameter-type">(MainForm | Form)[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">(MainForm | Form)[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">JOIN_REPEATING_SLIDES
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>like JOIN_FORMS but extends the behaviour on the reps.
+search all match of subKeyA in formB</p>
+<p>@export
+@param {MainForm[]} formsA
+@param {MainForm[]} formsB
+@param {string} keyA
+@param {string} keyB
+@param {string} subKeyA
+@param {string} [subKeyB]
+@return {*}  {MainForm[]}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        formsA</p>
+      <code class="docs-api-method-parameter-type">MainForm[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        formsB</p>
+      <code class="docs-api-method-parameter-type">MainForm[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        keyA</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        keyB</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        subKeyA</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        subKeyB<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MainForm[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{MainForm[]}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">FROM_REPS
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>this function extract an array of evaluated expression from main form reps.</p>
+<p>@export
+@param {MainForm} mainForm
+@param {string} expression
+@return {*}  {any[]}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        mainForm</p>
+      <code class="docs-api-method-parameter-type">MainForm</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        expression</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">any[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{any[]}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ISIN
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>this function return true if value is inside of dataset</p>
+<p>@export
+@param {any[]} dataset
+@param {<em>} value
+@return {</em>}  {boolean}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataset</p>
+      <code class="docs-api-method-parameter-type">any[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        value</p>
+      <code class="docs-api-method-parameter-type">any</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{boolean}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">OP
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>the lengths of the datasets are assumed to be the same.
+this function return an array list of calculated values.
+each element of the array is calculated by replacing elemA with the current element of a
+and elemB with the current element of b inside the expression.</p>
+<p>@export
+@param {number[]} datasetA
+@param {number[]} datasetB
+@param {string} expression
+@return {*}  {number[]}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        datasetA</p>
+      <code class="docs-api-method-parameter-type">number[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        datasetB</p>
+      <code class="docs-api-method-parameter-type">number[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        expression</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{number[]}</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">GET_LABELS
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>this function take a ajf schema and a list of field names as input and
+returns a list of label matched inside a schema choiche origins.</p>
+<p>@export
+@param {<em>} schema
+@param {string[]} fieldNames
+@return {</em>}  {string[]}</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        schema</p>
+      <code class="docs-api-method-parameter-type">any</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        fieldNames</p>
+      <code class="docs-api-method-parameter-type">string[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>{string[]}</p>
 
       </p>
     </td>
@@ -3317,7 +4800,7 @@ discriminate which forms to take for the sum.</p>
   <code>dateUtils</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> dateUtils: { <span class="hljs-attr">addDays</span>: <span class="hljs-built_in">any</span>; addMonths: <span class="hljs-built_in">any</span>; addYears: <span class="hljs-built_in">any</span>; endOfISOWeek: <span class="hljs-built_in">any</span>; format: <span class="hljs-built_in">any</span>; getDay: <span class="hljs-built_in">any</span>; parse: <span class="hljs-built_in">any</span>; startOfMonth: <span class="hljs-built_in">any</span>; startOfISOWeek: <span class="hljs-built_in">any</span>; };</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> dateUtils: { <span class="hljs-attr">addDays</span>: <span class="hljs-built_in">any</span>; addMonths: <span class="hljs-built_in">any</span>; addYears: <span class="hljs-built_in">any</span>; endOfISOWeek: <span class="hljs-built_in">any</span>; format: <span class="hljs-built_in">any</span>; getDay: <span class="hljs-built_in">any</span>; parse: <span class="hljs-built_in">any</span>; startOfMonth: <span class="hljs-built_in">any</span>; startOfISOWeek: <span class="hljs-built_in">any</span>; isBefore: <span class="hljs-built_in">any</span>; };</code>
 </pre>
 </div>
 
