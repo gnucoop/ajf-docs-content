@@ -168,7 +168,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>flatNodes: Observable&lt;AjfNode[]&gt;</code>
+      <code>flatNodes: Observable&lt;AjfNode[]&gt; | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -787,9 +787,9 @@
 
 
 
-    <h3 id="material-form-builder-directives" class="docs-header-link docs-api-h3">
-      <span header-link="directives"></span>
-      Directives
+    <h3 id="material-form-builder-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      Classes
     </h3>
     
       
@@ -798,30 +798,12 @@
   <span header-link="AjfFormBuilder"></span>
   <code>AjfFormBuilder</code>
   
-</h4><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">ajf-form-builder</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
       <th class="docs-api-properties-th">Description</th>
     </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>form: AjfForm</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
     
       
 
@@ -852,6 +834,18 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>designerCont: ElementRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>form: AjfForm | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -968,7 +962,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">CdkDrag&lt;AjfFormBuilderNodeTypeEntry&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1066,7 +1060,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         evt</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">MatSlideToggleChange</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1103,7 +1097,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         event</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">CdkDragDrop&lt;AjfFormBuilderNodeEntry, AjfFormBuilderNodeEntry, any&gt; | CdkDragDrop&lt;AjfFormBuilderNodeTypeEntry, AjfFormBuilderNodeTypeEntry, any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1459,7 +1453,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         event</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">CdkDragDrop&lt;AjfFormBuilderNodeEntry, AjfFormBuilderNodeEntry, any&gt; | CdkDragDrop&lt;AjfFormBuilderNodeTypeEntry, AjfFormBuilderNodeTypeEntry, any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1535,7 +1529,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">CdkDrag&lt;AjfFormBuilderNodeTypeEntry&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1586,7 +1580,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">CdkDrag&lt;AjfFormBuilderNodeTypeEntry&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">

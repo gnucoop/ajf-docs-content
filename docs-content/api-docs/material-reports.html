@@ -98,9 +98,9 @@
 
 
 
-    <h3 id="material-reports-directives" class="docs-header-link docs-api-h3">
-      <span header-link="directives"></span>
-      Directives
+    <h3 id="material-reports-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      Classes
     </h3>
     
       
@@ -139,7 +139,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>instance: T</code>
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -168,12 +168,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">ajf-filter-widget</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -183,22 +178,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>instance: T</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>filteredInstance: EventEmitter&lt;AjfWidgetInstance&gt;</code>
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>el: ElementRef</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -210,7 +191,19 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>el: ElementRef</code>
+      <code>filteredInstance: Observable&lt;AjfWidgetInstance&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -262,7 +255,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>instance: T</code>
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -326,7 +319,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>instance: T</code>
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -378,7 +371,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>instance: T</code>
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -430,7 +423,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>instance: T</code>
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -482,7 +475,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>instance: T</code>
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -511,12 +504,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">ajf-report</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -526,9 +514,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>instance: AjfReportInstance</code>
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>instance: AjfReportInstance | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -592,7 +579,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>instance: T</code>
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -644,7 +631,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>instance: T</code>
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -673,12 +660,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">ajf-widget</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -688,9 +670,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>instance: AjfWidgetInstance</code>
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>instance: AjfWidgetInstance | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -766,7 +747,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>instance: T</code>
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -830,7 +811,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>instance: T</code>
+      <code>instance: T | undefined</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>

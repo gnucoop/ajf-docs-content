@@ -65,6 +65,18 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>override: </code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>stack: string</code>
     </p>
   </td>
@@ -2199,11 +2211,7 @@ extractArraySum([{a: 5}, {b: 1}, {a: 5, b: 1}], [&#39;a&#39;, &#39;b&#39;]); =&g
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">[
-    number,
-    number,
-    number
-]</code>
+      <code class="docs-api-method-returns-type">[number, number, number]</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -3018,7 +3026,7 @@ discriminate which forms to take for the sum.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         dataset</p>
-      <code class="docs-api-method-parameter-type">(string | number | string[] | number[])[]</code>
+      <code class="docs-api-method-parameter-type">(string | number | number[] | string[])[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -4800,7 +4808,7 @@ returns a list of label matched inside a schema choiche origins.</p>
   <code>dateUtils</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> dateUtils: { <span class="hljs-attr">addDays</span>: <span class="hljs-built_in">any</span>; addMonths: <span class="hljs-built_in">any</span>; addYears: <span class="hljs-built_in">any</span>; endOfISOWeek: <span class="hljs-built_in">any</span>; format: <span class="hljs-built_in">any</span>; getDay: <span class="hljs-built_in">any</span>; parse: <span class="hljs-built_in">any</span>; startOfMonth: <span class="hljs-built_in">any</span>; startOfISOWeek: <span class="hljs-built_in">any</span>; isBefore: <span class="hljs-built_in">any</span>; };</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> dateUtils: { <span class="hljs-attr">addDays</span>: <span class="hljs-function">(<span class="hljs-params">date: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">Date</span>, amount: <span class="hljs-built_in">number</span></span>) =&gt;</span> <span class="hljs-built_in">Date</span>; addMonths: <span class="hljs-function">(<span class="hljs-params">date: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">Date</span>, amount: <span class="hljs-built_in">number</span></span>) =&gt;</span> <span class="hljs-built_in">Date</span>; addYears: <span class="hljs-function">(<span class="hljs-params">date: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">Date</span>, amount: <span class="hljs-built_in">number</span></span>) =&gt;</span> <span class="hljs-built_in">Date</span>; endOfISOWeek: <span class="hljs-function">(<span class="hljs-params">date: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">Date</span></span>) =&gt;</span> <span class="hljs-built_in">Date</span>; format: <span class="hljs-function">(<span class="hljs-params">date: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">Date</span>, format: <span class="hljs-built_in">string</span>, options?: { locale?: Locale; weekStartsOn?: <span class="hljs-number">0</span> | <span class="hljs-number">1</span> | <span class="hljs-number">2</span> | <span class="hljs-number">3</span> | <span class="hljs-number">4</span> | <span class="hljs-number">5</span> | <span class="hljs-number">6</span>; firstWeekContainsDate?: <span class="hljs-built_in">number</span>; useAdditionalWeekYearTokens?: <span class="hljs-built_in">boolean</span>; useAdditionalDayOfYearTokens?: <span class="hljs-built_in">boolean</span>; }</span>) =&gt;</span> <span class="hljs-built_in">string</span>; getDay: <span class="hljs-function">(<span class="hljs-params">date: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">Date</span></span>) =&gt;</span> <span class="hljs-number">0</span> | <span class="hljs-number">1</span> | <span class="hljs-number">2</span> | <span class="hljs-number">3</span> | <span class="hljs-number">4</span> | <span class="hljs-number">5</span> | <span class="hljs-number">6</span>; parse: <span class="hljs-function">(<span class="hljs-params">argument: <span class="hljs-built_in">string</span>, options?: { additionalDigits?: <span class="hljs-number">0</span> | <span class="hljs-number">1</span> | <span class="hljs-number">2</span>; }</span>) =&gt;</span> <span class="hljs-built_in">Date</span>; startOfMonth: <span class="hljs-function">(<span class="hljs-params">date: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">Date</span></span>) =&gt;</span> <span class="hljs-built_in">Date</span>; startOfISOWeek: <span class="hljs-function">(<span class="hljs-params">date: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">Date</span></span>) =&gt;</span> <span class="hljs-built_in">Date</span>; isBefore: <span class="hljs-function">(<span class="hljs-params">date: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">Date</span>, dateToCompare: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">Date</span></span>) =&gt;</span> <span class="hljs-built_in">boolean</span>; };</code>
 </pre>
 </div>
 

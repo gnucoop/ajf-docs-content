@@ -47,6 +47,16 @@ const EXAMPLE_COMPONENTS = {
  */
 class ExampleData {
     constructor(example) {
+        /** Description of the example. */
+        this.description = '';
+        /** List of files that are part of this example. */
+        this.exampleFiles = [];
+        /** Selector name of the example component. */
+        this.selectorName = '';
+        /** Name of the file that contains the example component. */
+        this.indexFilename = '';
+        /** Names of the components being used in this example. */
+        this.componentNames = [];
         if (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
             return;
         }
@@ -65,4 +75,4 @@ class ExampleData {
  */
 
 export { EXAMPLE_COMPONENTS, ExampleData };
-//# sourceMappingURL=ajf-examples.mjs.map
+//# sourceMappingURL=ajf-ajf-examples.mjs.map
