@@ -220,7 +220,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         group</p>
-      <code class="docs-api-method-parameter-type">AjfNodeGroupInstance | AjfRepeatingSlideInstance</code>
+      <code class="docs-api-method-parameter-type">AjfRepeatingSlideInstance | AjfNodeGroupInstance</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -334,7 +334,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         group</p>
-      <code class="docs-api-method-parameter-type">AjfNodeGroupInstance | AjfRepeatingSlideInstance</code>
+      <code class="docs-api-method-parameter-type">AjfRepeatingSlideInstance | AjfNodeGroupInstance</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1076,7 +1076,7 @@ by input instance.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         field</p>
-      <code class="docs-api-method-parameter-type">AjfField | AjfFieldType</code>
+      <code class="docs-api-method-parameter-type">AjfBarcodeField | AjfBooleanField | AjfDateField | AjfDateInputField | AjfEmptyField | AjfFileField | AjfFormulaField | AjfImageField | AjfNumberField | AjfRangeField | AjfStringField | AjfTableField | AjfTextField | AjfTimeField | AjfFieldWithChoices&lt;any&gt; | AjfMultipleChoiceField&lt;any&gt; | AjfSingleChoiceField&lt;any&gt; | AjfFieldType</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1707,7 +1707,7 @@ in expanded mode.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         nodeGroup</p>
-      <code class="docs-api-method-parameter-type">AjfSlideInstance | AjfNodeGroupInstance | AjfRepeatingSlideInstance</code>
+      <code class="docs-api-method-parameter-type">AjfRepeatingSlideInstance | AjfSlideInstance | AjfNodeGroupInstance</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1879,7 +1879,7 @@ in expanded mode.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         nodeGroup</p>
-      <code class="docs-api-method-parameter-type">AjfSlideInstance | AjfNodeGroupInstance | AjfRepeatingSlideInstance</code>
+      <code class="docs-api-method-parameter-type">AjfRepeatingSlideInstance | AjfSlideInstance | AjfNodeGroupInstance</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -3054,7 +3054,7 @@ the form inherited from AjfBaseFieldComponent.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         origin</p>
-      <code class="docs-api-method-parameter-type">Partial&lt;AjfChoicesOrigin&lt;any&gt;&gt;</code>
+      <code class="docs-api-method-parameter-type">Partial&lt;AjfChoicesFixedOrigin&lt;T&gt;&gt; | Partial&lt;AjfChoicesFunctionOrigin&lt;T&gt;&gt; | Partial&lt;AjfChoicesObservableArrayOrigin&lt;T&gt;&gt; | Partial&lt;AjfChoicesObservableOrigin&lt;T&gt;&gt; | Partial&lt;AjfChoicesPromiseOrigin&lt;T&gt;&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -3069,7 +3069,7 @@ the form inherited from AjfBaseFieldComponent.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">AjfChoicesOrigin&lt;any&gt;</code>
+      <code class="docs-api-method-returns-type">AjfChoicesOrigin&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -3193,7 +3193,7 @@ throw new error if id,parent or nodeType attribute missed</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         json</p>
-      <code class="docs-api-method-parameter-type">Partial&lt;AjfNode&gt;</code>
+      <code class="docs-api-method-parameter-type">Partial&lt;AjfBarcodeField&gt; | Partial&lt;AjfBooleanField&gt; | Partial&lt;AjfDateField&gt; | Partial&lt;AjfDateInputField&gt; | Partial&lt;AjfEmptyField&gt; | Partial&lt;AjfFileField&gt; | Partial&lt;AjfFormulaField&gt; | Partial&lt;AjfImageField&gt; | Partial&lt;AjfNumberField&gt; | Partial&lt;AjfRangeField&gt; | Partial&lt;AjfStringField&gt; | Partial&lt;AjfTableField&gt; | Partial&lt;AjfTextField&gt; | Partial&lt;AjfTimeField&gt; | Partial&lt;AjfFieldWithChoices&lt;any&gt;&gt; | Partial&lt;AjfMultipleChoiceField&lt;any&gt;&gt; | Partial&lt;AjfSingleChoiceField&lt;any&gt;&gt; | Partial&lt;AjfContainerNode&gt; | Partial&lt;AjfFieldNodeLink&gt; | Partial&lt;AjfNodeGroup&gt; | Partial&lt;AjfRepeatingNode&gt; | Partial&lt;AjfRepeatingSlide&gt; | Partial&lt;AjfRepeatingContainerNode&gt; | Partial&lt;AjfSlide&gt; | Partial&lt;AjfUnknownNode&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -4407,74 +4407,6 @@ It rappresents the result of warning condition.</p>
     
       
 
-<h4 id="AjfChoicesOrigin" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="AjfChoicesOrigin"></span>
-  <code>AjfChoicesOrigin</code>
-</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>choices: AjfChoice&lt;T&gt;[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>label: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>name: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>type: AjfChoicesOriginType</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
 <h4 id="AjfChoicesPromiseOrigin" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="AjfChoicesPromiseOrigin"></span>
   <code>AjfChoicesPromiseOrigin</code>
@@ -4693,204 +4625,14 @@ It rappresents the result of warning condition.</p>
 
 
     
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="AjfField" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="AjfField"></span>
-  <code>AjfField</code>
-</h4><p class="docs-api-interface-description"><p>An ajf node of type Field. It is the building block for all the Fields in a Form.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
       
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>attachmentOrigin: AjfAttachmentsOrigin&lt;any&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The origin of the attachments related to the field.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>attachments: any[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Any attachments (files uploaded on the form) related to the field.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultValue: any</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The default value of the Field</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>description: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A brief description of the Field.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>editable: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>If set to true the Field input is editable</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>fieldType: AjfFieldType</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Type of the Field.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>formula: AjfFormula</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A formula used to derive the value of the field.
-If set, makes the field input read-only (not editable).</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>hint: string</code>
+      <code>fieldType: AjfFieldType.Empty</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>hintIcon: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Hint icon showed as anchor of hint</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>nextSlideCondition: AjfCondition</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>nodeType: AjfNodeType.AjfField</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Type of the node.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>size: AjfFieldSize</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The size of the Field to be used when the Field is rendered</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>validation: AjfValidationGroup</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A set of conditions that defines if the Field value is valid.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>warning: AjfWarningGroup</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A set of conditions that defines if warning must be shown.</p>
-</td>
 </tr>
 
 
@@ -4966,6 +4708,18 @@ components used to render it.</p>
   </td>
   <td class="docs-api-property-description"><p>The source of the initial choices list, taken from the json schema</p>
 </td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>fieldType: AjfFieldType.MultipleChoice | AjfFieldType.SingleChoice</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -6262,12 +6016,10 @@ of its fields.</p>
     
       
 
-<h4 id="AjfNode" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="AjfNode"></span>
-  <code>AjfNode</code>
-</h4><p class="docs-api-interface-description"><p>The base element of ajf forms (for example a slide or a field).
-Can contain other nodes in a recursive nodes tree.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+<h4 id="AjfUnknownNode" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfUnknownNode"></span>
+  <code>AjfUnknownNode</code>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -6278,109 +6030,10 @@ Can contain other nodes in a recursive nodes tree.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>conditionalBranches: AjfCondition[]</code>
+      <code>nodeType: AjfNodeType.LENGTH</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>List of conditions that determines the branch to be followed</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>id: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Node identification number</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>label: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The label of the field</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>name: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The name of the field</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>nodeType: AjfNodeType</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The node type</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>parent: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Id of the parent node</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>parentNode: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The index of the condition in the conditionalBranches array of the parent node
-that determines if the current branch should be followed.
-(eg.
-   parentNode.id = 1
-   parentNode.conditionalBranches = [&#39;x &gt; 1&#39;, &#39;x &lt;= 1&#39;, &#39;true&#39;];
-   myCurrentNode.parent = 1
-   myCurrentNode.parentNode = 0;</p>
-<p>In this case, if the condition &#39;x &gt; 1&#39; is met, the current branch will be followed ).</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>visibility: AjfCondition</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>AjfCondition for handling visibility</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -6607,161 +6260,6 @@ Example: &quot;opd_treatment == &#39;Yes&#39; &amp;&amp; ($groupReps || 1) || 0&
     </p>
   </td>
   <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="AjfNodeInstance" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="AjfNodeInstance"></span>
-  <code>AjfNodeInstance</code>
-</h4><p class="docs-api-interface-description"><p>The instance of an ajfNode.
-A single ajfNode can have multiple instances with different values
-differentiated by a suffix, when used in a repeating slide.
-(eg.
-country__0 = &#39;ITA&#39;, country__1 = &#39;ESP&#39;
-city__0__0 = &#39;Milano&#39;, city__0__1 = &#39;Roma&#39;, city__1__0 = &#39;Madrid&#39;
-)</p>
-<p>The AjfNodeInstance visibility is determined by the visibility of the current branch
-and  the visibility condition of the node itself.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>conditionalBranches: AjfCondition[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>List of conditions that determines the branch to be followed</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>node: AjfNode</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The AjfNode blueprint from which this node instance is generated</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>prefix: number[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Array of prefixes that identifies the tree of all the ancestor nodes indexes</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>updatedEvt: EventEmitter&lt;void&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Emitted when any property of the node instance has changed value</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>verifiedBranch: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Identifies the index of the condition verified and is equal to the
-parentNode of branch that determines..?</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>visibility: AjfCondition</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>AjfCondition for handling visibility</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>visible: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The current node visibility</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="AjfRepeatingContainerNodeInstance" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="AjfRepeatingContainerNodeInstance"></span>
-  <code>AjfRepeatingContainerNodeInstance</code>
-</h4><p class="docs-api-interface-description"><p>A node instance containing an AjfRepeatingContainerNode node.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>node: AjfRepeatingContainerNode</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The blueprint AjfRepeatingContainerNode.</p>
-</td>
 </tr>
 
 
@@ -7791,7 +7289,7 @@ ex. ajf-icon-field-string, ajf-icon-field-number, ajf-icon-field-text ecc.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         translate<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">(s</code>
+      <code class="docs-api-method-parameter-type">(_</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -8358,7 +7856,7 @@ If editable is not defined return true if field type is&#39;nt formula or table<
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">AjfField</code>
+      <code class="docs-api-method-returns-type">T</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -8396,7 +7894,7 @@ and the field is a fieldWithChoice (componentsMap[field.fieldType].isFieldWithCh
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         field</p>
-      <code class="docs-api-method-parameter-type">AjfField</code>
+      <code class="docs-api-method-parameter-type">AjfField&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -8446,7 +7944,7 @@ and the field is a fieldWithChoice (componentsMap[field.fieldType].isFieldWithCh
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         field</p>
-      <code class="docs-api-method-parameter-type">AjfField</code>
+      <code class="docs-api-method-parameter-type">AjfField&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -8461,7 +7959,7 @@ and the field is a fieldWithChoice (componentsMap[field.fieldType].isFieldWithCh
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
+      <code class="docs-api-method-returns-type">field is AjfFieldWithChoices&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -8496,7 +7994,7 @@ and the field is a fieldWithChoice (componentsMap[field.fieldType].isFieldWithCh
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         field</p>
-      <code class="docs-api-method-parameter-type">AjfField</code>
+      <code class="docs-api-method-parameter-type">AjfField&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -8546,7 +8044,7 @@ and the field is a fieldWithChoice (componentsMap[field.fieldType].isFieldWithCh
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         field</p>
-      <code class="docs-api-method-parameter-type">AjfField</code>
+      <code class="docs-api-method-parameter-type">AjfField&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -8561,7 +8059,7 @@ and the field is a fieldWithChoice (componentsMap[field.fieldType].isFieldWithCh
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
+      <code class="docs-api-method-returns-type">field is AjfRangeField</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -8959,7 +8457,7 @@ recursively  concat their nodes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
+      <code class="docs-api-method-returns-type">node is AjfContainerNode</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -9009,7 +8507,7 @@ recursively  concat their nodes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
+      <code class="docs-api-method-returns-type">node is AjfField</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -9059,7 +8557,7 @@ recursively  concat their nodes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
+      <code class="docs-api-method-returns-type">node is AjfRepeatingContainerNode</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -9109,7 +8607,7 @@ recursively  concat their nodes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
+      <code class="docs-api-method-returns-type">node is AjfRepeatingSlide | AjfSlide</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -9163,7 +8661,7 @@ Assign new eventEmitter to updatedEvt.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">AjfNodeInstance</code>
+      <code class="docs-api-method-returns-type">AjfBaseNodeInstance</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -9677,12 +9175,38 @@ an AjfValidation.</p>
     
       
 
+<h4 id="AjfChoicesOrigin" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="AjfChoicesOrigin"></span>
+  <code>AjfChoicesOrigin</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesOrigin = AjfChoicesFixedOrigin&lt;T&gt; | AjfChoicesFunctionOrigin&lt;T&gt; | AjfChoicesObservableArrayOrigin&lt;T&gt; | AjfChoicesObservableOrigin&lt;T&gt; | AjfChoicesPromiseOrigin&lt;T&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
 <h4 id="AjfChoicesOriginType" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="AjfChoicesOriginType"></span>
   <code>AjfChoicesOriginType</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfChoicesOriginType = <span class="hljs-string">&#x27;fixed&#x27;</span> | <span class="hljs-string">&#x27;function&#x27;</span> | <span class="hljs-string">&#x27;observable&#x27;</span> | <span class="hljs-string">&#x27;observableArray&#x27;</span> | <span class="hljs-string">&#x27;promise&#x27;</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="AjfField" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="AjfField"></span>
+  <code>AjfField</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfField = AjfBarcodeField | AjfBooleanField | AjfDateField | AjfDateInputField | AjfEmptyField | AjfFieldWithChoices&lt;T&gt; | AjfFileField | AjfFormulaField | AjfImageField | AjfMultipleChoiceField&lt;T&gt; | AjfNumberField | AjfRangeField | AjfSingleChoiceField&lt;T&gt; | AjfStringField | AjfTableField | AjfTextField | AjfTimeField;</code>
 </pre>
 </div>
 
@@ -9717,6 +9241,19 @@ an AjfValidation.</p>
     
       
 
+<h4 id="AjfNode" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="AjfNode"></span>
+  <code>AjfNode</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfNode = AjfContainerNode | AjfField | AjfFieldNodeLink | AjfNodeGroup | AjfRepeatingNode | AjfRepeatingSlide | AjfRepeatingContainerNode | AjfSlide | AjfUnknownNode;</code>
+</pre>
+</div>
+
+
+    
+      
+
 <h4 id="AjfRepeatingContainerNode" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="AjfRepeatingContainerNode"></span>
   <code>AjfRepeatingContainerNode</code>
@@ -9727,6 +9264,32 @@ the same node group N times, where N is the value of the &quot;formulaReps&quot;
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfRepeatingContainerNode = AjfContainerNode &amp; AjfRepeatingNode;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="AjfNodeInstance" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="AjfNodeInstance"></span>
+  <code>AjfNodeInstance</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfNodeInstance = AjfContainerNodeInstance | AjfFieldInstance | AjfRepeatingNodeInstance | AjfRepeatingSlideInstance | AjfSlideInstance;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="AjfRepeatingContainerNodeInstance" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="AjfRepeatingContainerNodeInstance"></span>
+  <code>AjfRepeatingContainerNodeInstance</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfRepeatingContainerNodeInstance = AjfNodeGroupInstance | AjfRepeatingSlideInstance;</code>
 </pre>
 </div>
 
@@ -9817,7 +9380,7 @@ the same node group N times, where N is the value of the &quot;formulaReps&quot;
   <code>AjfFieldCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfFieldCreate = Omit&lt;AjfNodeCreate, <span class="hljs-string">&#x27;nodeType&#x27;</span>&gt; &amp; Pick&lt;AjfField, <span class="hljs-string">&#x27;fieldType&#x27;</span>&gt; &amp; Partial&lt;AjfField&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfFieldCreate = Omit&lt;AjfNodeCreate, <span class="hljs-string">&#x27;nodeType&#x27;</span>&gt; &amp; Pick&lt;AjfBaseField, <span class="hljs-string">&#x27;fieldType&#x27;</span>&gt; &amp; Partial&lt;AjfBaseField&gt;;</code>
 </pre>
 </div>
 
@@ -9895,7 +9458,7 @@ the same node group N times, where N is the value of the &quot;formulaReps&quot;
   <code>AjfNodeInstanceCreate</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfNodeInstanceCreate = Pick&lt;AjfNodeInstance, <span class="hljs-string">&#x27;node&#x27;</span>&gt; &amp; Partial&lt;AjfNodeInstance&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfNodeInstanceCreate = Pick&lt;AjfBaseNodeInstance, <span class="hljs-string">&#x27;node&#x27;</span>&gt; &amp; Partial&lt;AjfBaseNodeInstance&gt;;</code>
 </pre>
 </div>
 
