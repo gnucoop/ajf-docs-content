@@ -4199,6 +4199,74 @@ It rappresents the result of warning condition.</p>
     
       
 
+<h4 id="AjfBaseChoicesOrigin" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfBaseChoicesOrigin"></span>
+  <code>AjfBaseChoicesOrigin</code>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>choices: AjfChoice&lt;T&gt;[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>label: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>type: AjfChoicesOriginType</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
 <h4 id="AjfChoice" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="AjfChoice"></span>
   <code>AjfChoice</code>
@@ -4437,6 +4505,208 @@ It rappresents the result of warning condition.</p>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="AjfBaseField" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfBaseField"></span>
+  <code>AjfBaseField</code>
+</h4><p class="docs-api-interface-description"><p>An ajf node of type Field. It is the building block for all the Fields in a Form.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>attachmentOrigin: AjfAttachmentsOrigin&lt;any&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The origin of the attachments related to the field.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>attachments: any[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Any attachments (files uploaded on the form) related to the field.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultValue: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The default value of the Field</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>description: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>A brief description of the Field.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>editable: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>If set to true the Field input is editable</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>fieldType: AjfFieldType</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Type of the Field.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>formula: AjfFormula</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>A formula used to derive the value of the field.
+If set, makes the field input read-only (not editable).</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hint: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hintIcon: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Hint icon showed as anchor of hint</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nextSlideCondition: AjfCondition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nodeType: AjfNodeType.AjfField</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Type of the node.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>size: AjfFieldSize</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The size of the Field to be used when the Field is rendered</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>validation: AjfValidationGroup</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>A set of conditions that defines if the Field value is valid.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>warning: AjfWarningGroup</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>A set of conditions that defines if warning must be shown.</p>
+</td>
 </tr>
 
 
@@ -5970,6 +6240,139 @@ of its fields.</p>
     
       
 
+<h4 id="AjfBaseNode" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfBaseNode"></span>
+  <code>AjfBaseNode</code>
+</h4><p class="docs-api-interface-description"><p>The base element of ajf forms (for example a slide or a field).
+Can contain other nodes in a recursive nodes tree.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>conditionalBranches: AjfCondition[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>List of conditions that determines the branch to be followed</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Node identification number</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>label: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The label of the field</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The name of the field</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nodeType: AjfNodeType</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The node type</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>parent: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Id of the parent node</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>parentNode: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The index of the condition in the conditionalBranches array of the parent node
+that determines if the current branch should be followed.
+(eg.
+   parentNode.id = 1
+   parentNode.conditionalBranches = [&#39;x &gt; 1&#39;, &#39;x &lt;= 1&#39;, &#39;true&#39;];
+   myCurrentNode.parent = 1
+   myCurrentNode.parentNode = 0;</p>
+<p>In this case, if the condition &#39;x &gt; 1&#39; is met, the current branch will be followed ).</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>visibility: AjfCondition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>AjfCondition for handling visibility</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
 <h4 id="AjfContainerNode" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="AjfContainerNode"></span>
   <code>AjfContainerNode</code>
@@ -6180,6 +6583,160 @@ Example: &quot;opd_treatment == &#39;Yes&#39; &amp;&amp; ($groupReps || 1) || 0&
   </td>
   <td class="docs-api-property-description"><p>Min number of repetitions</p>
 </td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="AjfBaseNodeInstance" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfBaseNodeInstance"></span>
+  <code>AjfBaseNodeInstance</code>
+</h4><p class="docs-api-interface-description"><p>The instance of an ajfNode.
+A single ajfNode can have multiple instances with different values
+differentiated by a suffix, when used in a repeating slide.
+(eg.
+country__0 = &#39;ITA&#39;, country__1 = &#39;ESP&#39;
+city__0__0 = &#39;Milano&#39;, city__0__1 = &#39;Roma&#39;, city__1__0 = &#39;Madrid&#39;
+)</p>
+<p>The AjfNodeInstance visibility is determined by the visibility of the current branch
+and  the visibility condition of the node itself.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>conditionalBranches: AjfCondition[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>List of conditions that determines the branch to be followed</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>node: AjfNode</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The AjfNode blueprint from which this node instance is generated</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>prefix: number[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Array of prefixes that identifies the tree of all the ancestor nodes indexes</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>updatedEvt: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emitted when any property of the node instance has changed value</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>verifiedBranch: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Identifies the index of the condition verified and is equal to the
+parentNode of branch that determines..?</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>visibility: AjfCondition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>AjfCondition for handling visibility</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>visible: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The current node visibility</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="AjfBaseRepeatingContainerNodeInstance" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfBaseRepeatingContainerNodeInstance"></span>
+  <code>AjfBaseRepeatingContainerNodeInstance</code>
+</h4><p class="docs-api-interface-description"><p>A node instance containing an AjfRepeatingContainerNode node.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>node: AjfRepeatingContainerNode</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
