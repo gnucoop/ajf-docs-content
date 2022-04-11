@@ -1,0 +1,304 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2>
+    API reference for Angular Core graph
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {AjfGraphModule} from '@ajf/core/graph';
+      </code>
+    </p>
+  <h3 id="core-graph-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      Classes
+    </h3>
+    
+      
+
+<h4 id="Edge" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="Edge"></span>
+  <code>Edge</code>
+  
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>path: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="AjfGraphComponent" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="AjfGraphComponent"></span>
+  <code>AjfGraphComponent</code>
+  
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>boxes$: BehaviorSubject&lt;Box[]&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>edges$: BehaviorSubject&lt;Edge[]&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>graph: dagre.graphlib.Graph&lt;{}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>graphElement: ElementRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nodes: AjfGraphNode[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">lines
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>data una stringa crea un array di stringhe in base ad un TEXT_END
+se la ripartizione ricade all&#39;interno di una parola shifta il delimiter fino a trovare uno
+spazio bianco.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        text</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    <h3 id="core-graph-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="AjfGraphNode" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfGraphNode"></span>
+  <code>AjfGraphNode</code>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>green: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>label: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>parentId: string | string[] | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>red: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>yellow: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    </div>
