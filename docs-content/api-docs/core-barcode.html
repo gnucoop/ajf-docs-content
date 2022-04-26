@@ -41,7 +41,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>canvasCtx: CanvasRenderingContext2D | undefined</code>
+      <code>barcodeImagePreview: ElementRef&lt;HTMLImageElement&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -53,7 +53,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>codeReader: BrowserMultiFormatReader</code>
+      <code>barcodeVideo: ElementRef&lt;HTMLVideoElement&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -65,7 +65,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>startCalculation: EventEmitter&lt;string&gt;</code>
+      <code>barcodeVideoPreview: ElementRef&lt;HTMLDivElement&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -77,7 +77,19 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>startDetection: EventEmitter&lt;void&gt;</code>
+      <code>showSwitchButton: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>supportsVideoStream: boolean</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -191,6 +203,36 @@
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">onTabChange
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        idx</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell">reset
       </th>
     </tr>
@@ -203,7 +245,7 @@
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">takeSnapshot
+      <th colspan="2" class="docs-api-method-name-cell">switchCamera
       </th>
     </tr>
   </thead></table>
