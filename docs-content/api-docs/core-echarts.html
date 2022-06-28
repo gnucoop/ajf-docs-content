@@ -1,0 +1,239 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2>
+    API reference for Angular Core echarts
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {AjfEchartsModule} from '@ajf/core/echarts';
+      </code>
+    </p>
+  <h3 id="core-echarts-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      Classes
+    </h3>
+    
+      
+
+<h4 id="AjfEchartsDirective" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="AjfEchartsDirective"></span>
+  <code>AjfEchartsDirective</code>
+  
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chartInit: EventEmitter&lt;AjfEchartsInitEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>options: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>renderer: EChartsRenderer</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>theme: string | object</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="core-echarts-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="AjfEchartsConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfEchartsConfig"></span>
+  <code>AjfEchartsConfig</code>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>echarts: EchartsModule | AjfEchartsProvider</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="AjfEchartsInitEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfEchartsInitEvent"></span>
+  <code>AjfEchartsInitEvent</code>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chart: echarts.ECharts</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>echarts: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="core-echarts-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      Type aliases
+    </h3>
+    
+      
+
+<h4 id="EchartsModule" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="EchartsModule"></span>
+  <code>EchartsModule</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> EchartsModule = <span class="hljs-built_in">any</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="AjfEchartsProvider" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="AjfEchartsProvider"></span>
+  <code>AjfEchartsProvider</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfEchartsProvider = <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;EchartsModule&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="EChartsRenderer" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="EChartsRenderer"></span>
+  <code>EChartsRenderer</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> EChartsRenderer = <span class="hljs-string">&#x27;canvas&#x27;</span> | <span class="hljs-string">&#x27;svg&#x27;</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="core-echarts-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      Constants
+    </h3>
+    
+      
+
+<h4 id="AJF_ECHARTS_PROVIDER" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="AJF_ECHARTS_PROVIDER"></span>
+  <code>AJF_ECHARTS_PROVIDER</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> AJF_ECHARTS_PROVIDER: InjectionToken&lt;AjfEchartsProvider&gt;;</code>
+</pre>
+</div>
+
+
+    </div>
