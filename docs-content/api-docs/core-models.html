@@ -3088,6 +3088,8 @@ discriminate which forms to take for the sum.</p>
       <p>Build a dataset based on a list of Forms, for ajf dynamic table
 @param dataset the dataset for the table
 @param fields the list of fields name for each row
+@param rowLink the http link for the row, with the form field name with the link value and the column position for the link.
+ie: {&#39;link&#39;: &#39;home_link&#39;, &#39;position&#39;: 0}
 @param backgroundColorA the first backgroud color
 @param backgroundColorB the second backgroud color
 @returns An AjfTableCell list</p>
@@ -3117,6 +3119,19 @@ discriminate which forms to take for the sum.</p>
       <p class="docs-api-method-parameter-name">
         fields</p>
       <code class="docs-api-method-parameter-type">string[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        rowLink</p>
+      <code class="docs-api-method-parameter-type">{ link</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
