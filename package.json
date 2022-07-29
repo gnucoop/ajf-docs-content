@@ -1,11 +1,11 @@
 {
   "name": "@ajf/ajf-examples",
-  "version": "13.2.2",
+  "version": "13.2.3",
   "peerDependencies": {
     "@angular/core": "^13.2.5",
     "@angular/common": "^13.2.5",
-    "@ajf/core": "13.2.2",
-    "@ajf/ionic": "13.2.2"
+    "@ajf/core": "13.2.3",
+    "@ajf/ionic": "13.2.3"
   },
   "dependencies": {
     "tslib": "^2.3.0"
