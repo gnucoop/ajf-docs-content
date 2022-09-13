@@ -550,7 +550,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         json</p>
-      <code class="docs-api-method-parameter-type">Partial&lt;AjfChartWidget&gt; | Partial&lt;AjfDataWidget&gt; | Partial&lt;AjfColumnWidget&gt; | Partial&lt;AjfWidgetWithContent&gt; | Partial&lt;AjfDialogWidget&gt; | Partial&lt;AjfDynamicTableWidget&gt; | Partial&lt;AjfFormulaWidget&gt; | Partial&lt;AjfGraphWidget&gt; | Partial&lt;AjfHeatMapWidget&gt; | Partial&lt;AjfImageContainerWidget&gt; | Partial&lt;AjfImageWidget&gt; | Partial&lt;AjfLayoutWidget&gt; | Partial&lt;AjfMapWidget&gt; | Partial&lt;AjfPageBreakWidget&gt; | Partial&lt;AjfPaginatedListWidget&gt; | Partial&lt;AjfTextWidget&gt; | Partial&lt;AjfUnknownWidget&gt;</code>
+      <code class="docs-api-method-parameter-type">Partial&lt;AjfChartWidget&gt; | Partial&lt;AjfDataWidget&gt; | Partial&lt;AjfColumnWidget&gt; | Partial&lt;AjfWidgetWithContent&gt; | Partial&lt;AjfDialogWidget&gt; | Partial&lt;AjfDynamicTableWidget&gt; | Partial&lt;AjfFormulaWidget&gt; | Partial&lt;AjfGraphWidget&gt; | Partial&lt;AjfHeatMapWidget&gt; | Partial&lt;AjfImageContainerWidget&gt; | Partial&lt;AjfImageWidget&gt; | Partial&lt;AjfLayoutWidget&gt; | Partial&lt;AjfMapWidget&gt; | Partial&lt;AjfPageBreakWidget&gt; | Partial&lt;AjfPaginatedListWidget&gt; | Partial&lt;AjfTextWidget&gt; | Partial&lt;AjfUnknownWidget&gt; | Partial&lt;AjfPaginatedTableWidget&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2813,6 +2813,99 @@
     
       
 
+<h4 id="AjfPaginatedTableWidget" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfPaginatedTableWidget"></span>
+  <code>AjfPaginatedTableWidget</code>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>cellStyles: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dataset: AjfTableDataset[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>exportable: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pageSize: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>rowDefinition: AjfFormula</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>it should return a AjfTableCell[][]</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>widgetType: AjfWidgetType.PaginatedTable</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
 <h4 id="AjfTableWidget" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="AjfTableWidget"></span>
   <code>AjfTableWidget</code>
@@ -3881,6 +3974,62 @@
     
       
 
+<h4 id="AjfPaginatedTableWidgetInstance" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AjfPaginatedTableWidgetInstance"></span>
+  <code>AjfPaginatedTableWidgetInstance</code>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: AjfTableCell[][]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>exportable: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>widget: AjfPaginatedTableWidget</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
 <h4 id="AjfTableWidgetInstance" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="AjfTableWidgetInstance"></span>
   <code>AjfTableWidgetInstance</code>
@@ -4715,7 +4864,7 @@
   <code>AjfWidget</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfWidget = AjfChartWidget | AjfColumnWidget | AjfDataWidget | AjfDialogWidget | AjfDynamicTableWidget | AjfFormulaWidget | AjfGraphWidget | AjfHeatMapWidget | AjfImageContainerWidget | AjfImageWidget | AjfLayoutWidget | AjfMapWidget | AjfPageBreakWidget | AjfPaginatedListWidget | AjfTextWidget | AjfUnknownWidget | AjfWidgetWithContent;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfWidget = AjfChartWidget | AjfColumnWidget | AjfDataWidget | AjfDialogWidget | AjfDynamicTableWidget | AjfFormulaWidget | AjfGraphWidget | AjfHeatMapWidget | AjfImageContainerWidget | AjfImageWidget | AjfLayoutWidget | AjfMapWidget | AjfPageBreakWidget | AjfPaginatedListWidget | AjfTextWidget | AjfUnknownWidget | AjfWidgetWithContent | AjfPaginatedTableWidget;</code>
 </pre>
 </div>
 
@@ -4728,7 +4877,7 @@
   <code>AjfWidgetInstance</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfWidgetInstance = AjfChartWidgetInstance | AjfColumnWidgetInstance | AjfDataWidgetInstance | AjfDialogWidgetInstance | AjfDynamicTableWidgetInstance | AjfFormulaWidgetInstance | AjfGraphWidgetInstance | AjfHeatMapWidgetInstance | AjfImageContainerWidgetInstance | AjfImageWidgetInstance | AjfLayoutWidgetInstance | AjfMapWidgetInstance | AjfPageBreakWidgetInstance | AjfPaginatedListWidgetInstance | AjfTableWidgetInstance | AjfTextWidgetInstance | AjfWidgetWithContentInstance;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AjfWidgetInstance = AjfChartWidgetInstance | AjfColumnWidgetInstance | AjfDataWidgetInstance | AjfDialogWidgetInstance | AjfDynamicTableWidgetInstance | AjfFormulaWidgetInstance | AjfGraphWidgetInstance | AjfHeatMapWidgetInstance | AjfImageContainerWidgetInstance | AjfImageWidgetInstance | AjfLayoutWidgetInstance | AjfMapWidgetInstance | AjfPageBreakWidgetInstance | AjfPaginatedListWidgetInstance | AjfTableWidgetInstance | AjfTextWidgetInstance | AjfWidgetWithContentInstance | AjfPaginatedTableWidgetInstance;</code>
 </pre>
 </div>
 
