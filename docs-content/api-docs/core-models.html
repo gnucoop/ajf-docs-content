@@ -2233,7 +2233,8 @@ extractArraySum([{a: 5}, {b: 1}, {a: 5, b: 1}], [&#39;a&#39;, &#39;b&#39;]); =&g
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Calculates all the possible results that a field has taken</p>
+      <p>Returns an array containing all the values that the specified field takes in the forms.
+The values are converted to strings.</p>
 
     </td>
   </tr><thead>
@@ -2245,7 +2246,7 @@ extractArraySum([{a: 5}, {b: 1}, {a: 5, b: 1}], [&#39;a&#39;, &#39;b&#39;]); =&g
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        mainforms</p>
+        forms</p>
       <code class="docs-api-method-parameter-type">MainForm[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2258,7 +2259,7 @@ extractArraySum([{a: 5}, {b: 1}, {a: 5, b: 1}], [&#39;a&#39;, &#39;b&#39;]); =&g
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        fieldName</p>
+        field</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2341,10 +2342,8 @@ extractArraySum([{a: 5}, {b: 1}, {a: 5, b: 1}], [&#39;a&#39;, &#39;b&#39;]); =&g
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Counts the collected forms. The form name must be specified. An optional condition can be added
-to discriminate which forms to count in.
-the expression is first evaluated in mainForm if false the evaluation of expression is calculated
-in any reps. If expression is true in reps the form is counted</p>
+      <p>Returns the number of forms for which filterExpression evaluates to true,
+for the form itself or for any of its repetitions.</p>
 
     </td>
   </tr><thead>
@@ -2356,7 +2355,7 @@ in any reps. If expression is true in reps the form is counted</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        formList</p>
+        forms</p>
       <code class="docs-api-method-parameter-type">MainForm[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2407,9 +2406,7 @@ in any reps. If expression is true in reps the form is counted</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Counts the reps of the form.
-the expression is first evaluated in mainForm  if true return all reps counting else the evaluation of expression is calculated
-in any reps and return the count of all reps that satisfied the expression.</p>
+      <p>Counts the forms and all of their repetitions for which the expression evaluates to true.</p>
 
     </td>
   </tr><thead>
@@ -2421,7 +2418,7 @@ in any reps and return the count of all reps that satisfied the expression.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        formList</p>
+        forms</p>
       <code class="docs-api-method-parameter-type">MainForm[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2472,8 +2469,7 @@ in any reps and return the count of all reps that satisfied the expression.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Counts the amount of unique form values for a specific field. The form name must be specified. An
-optional condition can be added to discriminate which forms to count in</p>
+      <p>Counts the different values that the specified field takes in the forms (and their repetitions).</p>
 
     </td>
   </tr><thead>
@@ -2485,7 +2481,7 @@ optional condition can be added to discriminate which forms to count in</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        formList</p>
+        forms</p>
       <code class="docs-api-method-parameter-type">MainForm[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2498,7 +2494,7 @@ optional condition can be added to discriminate which forms to count in</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        fieldName</p>
+        field</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2549,8 +2545,8 @@ optional condition can be added to discriminate which forms to count in</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Aggregates and sums the values of one field. An optional condition can be added to discriminate
-which forms to take for the sum.</p>
+      <p>Aggregates and sums the values of the specified field.
+An optional expression can be added to filter which forms to take for the sum.</p>
 
     </td>
   </tr><thead>
@@ -2562,7 +2558,7 @@ which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        mainForms</p>
+        forms</p>
       <code class="docs-api-method-parameter-type">(MainForm | Form)[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2588,7 +2584,7 @@ which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        condition</p>
+        expression</p>
       <code class="docs-api-method-parameter-type">string = &#39;true&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -2626,8 +2622,8 @@ which forms to take for the sum.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Calculates the mean of a simple or derived value. An optional condition can be added to
-discriminate which forms to take for the sum.</p>
+      <p>Computes the mean of the values of the specified field.
+An optional expression can be added to filter which forms to take for the sum.</p>
 
     </td>
   </tr><thead>
@@ -2652,8 +2648,21 @@ discriminate which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        fieldName</p>
+        field</p>
       <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        expression</p>
+      <code class="docs-api-method-parameter-type">string = &#39;true&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2668,7 +2677,7 @@ discriminate which forms to take for the sum.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">string</code>
+      <code class="docs-api-method-returns-type">number</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2753,7 +2762,7 @@ discriminate which forms to take for the sum.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Calculates the expression in the last form by date.</p>
+      <p>Evaluates the expression in the last form by date.</p>
 
     </td>
   </tr><thead>
@@ -2807,7 +2816,7 @@ discriminate which forms to take for the sum.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">string</code>
+      <code class="docs-api-method-returns-type">any</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2829,7 +2838,7 @@ discriminate which forms to take for the sum.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Calculates the max value of the field.</p>
+      <p>Computes the max value of the field.</p>
 
     </td>
   </tr><thead>
@@ -2854,8 +2863,21 @@ discriminate which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        fieldName</p>
+        field</p>
       <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        expression</p>
+      <code class="docs-api-method-parameter-type">string = &#39;true&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2892,7 +2914,7 @@ discriminate which forms to take for the sum.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Calculates the median value of the field.</p>
+      <p>Computes the median value of the field.</p>
 
     </td>
   </tr><thead>
@@ -2917,8 +2939,21 @@ discriminate which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        fieldName</p>
+        field</p>
       <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        expression</p>
+      <code class="docs-api-method-parameter-type">string = &#39;true&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2933,7 +2968,7 @@ discriminate which forms to take for the sum.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">string</code>
+      <code class="docs-api-method-returns-type">number</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2955,7 +2990,7 @@ discriminate which forms to take for the sum.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Calculates the mode value of the field.</p>
+      <p>Computes the mode value of the field.</p>
 
     </td>
   </tr><thead>
@@ -2980,8 +3015,21 @@ discriminate which forms to take for the sum.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        fieldName</p>
+        field</p>
       <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        expression</p>
+      <code class="docs-api-method-parameter-type">string = &#39;true&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2996,7 +3044,7 @@ discriminate which forms to take for the sum.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">number[]</code>
+      <code class="docs-api-method-returns-type">number</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
